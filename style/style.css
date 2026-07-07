@@ -1,0 +1,19 @@
+body {
+    background-color: #dee8f8;
+}
+
+.header-container, .header-pages {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-pages {
+    margin-left: auto; 
+    margin-right: 0;
+    gap: 30px;
+}
+
+hr {
+    opacity: 50%;
+    color: #CDDCF4;
+}
