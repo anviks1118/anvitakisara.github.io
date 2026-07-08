@@ -2,15 +2,28 @@ body {
     background-color: #dee8f8;
 }
 
-.header-container, .header-pages {
+.header-container, .header-pages, .header-name {
     display: flex;
     flex-direction: row;
+}
+
+.header-name a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Trebuchet MS';
+    /* font-style: italic; */
 }
 
 .header-pages {
     margin-left: auto; 
     margin-right: 0;
     gap: 30px;
+}
+
+.header-pages a {
+    color: #5b9fd4;
+    text-decoration: none;
+    font-family: 'Trebuchet MS';
 }
 
 hr {
