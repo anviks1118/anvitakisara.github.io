@@ -17,13 +17,14 @@
 			</a>
 		</div>
 		<div class="header-pages">
-			<a href="#">
+			<!-- Changed hrefs to match section IDs -->
+			<a href="#projects">
 				<p>Projects</p>
 			</a>
-			<a href="#">
+			<a href="#about">
 				<p>About</p>
 			</a>
-			<a href="#">
+			<a href="#connect">
 				<p>Let's connect!</p>
 			</a>
 		</div>
@@ -44,42 +45,58 @@
 		</div>
 	</div>
 
-	<!-- Projects -->
-	<h3>Projects</h3>
-	<div>
-		<table>
-			<tr>
-				<td>
-					<p>Predictive Text App</p>
-					<p><i>UC Merced Internship | May 2026</i></p>
-					<img>
-				</td>
-				<td>
-					<p>Dyadic Association</p>
-					<p><i>UC Merced Professor Research | May 2025</i></p>
-					<img>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p>BART Track Inspection</p>
-					<p><i>Bay Area Rapid Transit (BART) | May 2025</i></p>
-					<img>
-				</td>
-			</tr>
-		</table>
-	</div>
+	<hr>
 
-	<!-- About -->
-	<div>
-		<h3>About</h3>
-		<p>Here is the about me section. I'm a hard worker i guess</p>
+	<!-- Projects Section -->
+	<div id="projects" class="projects-container">
+		<h3>PROJECTS</h3>
+		<div class="projects-grid">
+			<!-- Project 1 -->
+			<div class="project-card">
+				<div class="project-image-placeholder"></div>
+				<div class="project-info">
+					<p class="project-title">Predictive Text App</p>
+					<p class="project-meta">UC Merced Internship | May 2026</p>
+					<p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			<!-- Project 2 -->
+			<div class="project-card">
+				<div class="project-image-placeholder"></div>
+				<div class="project-info">
+					<p class="project-title">Dyadic Association</p>
+					<p class="project-meta">UC Merced Professor Research | May 2025</p>
+					<p class="project-desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+			</div>
+			<!-- Project 3 -->
+			<div class="project-card">
+				<div class="project-image-placeholder"></div>
+				<div class="project-info">
+					<p class="project-title">BART Track Inspection</p>
+					<p class="project-meta">Bay Area Rapid Transit (BART) | May 2025</p>
+					<p class="project-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.</p>
+				</div>
+			</div>
+		</div>
 	</div>
 	
-	<!-- Connect (LinkedIn, GitHub) -->
-	<div>
-		<h3>Let's connect!</h3>
-		<p>LinkedIn, GitHub icons</p>
+	<hr>
+
+	<!-- About Section -->
+	<div id="about" class="about-container">
+		<h3>ABOUT</h3>
+		<p>Here is the about me section. I'm a hard worker i guess</p>
+	</div>
+
+	<hr>
+	
+	<!-- Connect Section -->
+	<div id="connect" class="connect-container">
+		<h3>LET'S CONNECT!</h3>
+		<div class="connect-card">
+			<p>LinkedIn, GitHub icons</p>
+		</div>
 	</div>
 </body>
 
