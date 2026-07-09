@@ -55,66 +55,30 @@
 		<h3>PROJECTS</h3>
 		<div class="projects-grid">
 			<!-- Project -->
-			<div class="project-card">
+			<div class="project-card" onclick="openProjectModal('predictive-text')">
 				<div class="project-image-placeholder"></div>
 				<div class="project-info">
 					<p class="project-title">Predictive Text App</p>
 					<p class="project-meta">UC Merced Internship | May 2026</p>
-					<p class="project-desc">This project was developed to analyze user typing behavior and explore how predictive 
-						text features can enhance the text entry experience. Rather than focusing solely on generating word 
-						suggestions, the application captures detailed interaction data to better understand how users communicate 
-						and interact with a text editor. The goal of this project was to design and implement an interactive text 
-						analysis application that records user behaviors throughout a typing session. The system tracks spelling 
-						and grammar mistakes, predictive text suggestions, and keyboard interactions such as shortcut usage and 
-						editing actions. 
-						
-						Once the user finishes typing, the application compiles these interactions into a metrics 
-						dashboard that summarizes typing patterns, editing behavior, and overall text entry performance. By combining 
-						real-time text analysis with behavioral metrics, this project demonstrates how user interaction data can 
-						provide valuable insights into typing habits and interface usability. It integrates human-computer interaction 
-						principles, event-driven software development, and data visualization to create an application that supports 
-						both user behavior analysis and intelligent text assistance..</p>
+					<p class="project-desc"></p>
 				</div>
 			</div>
 			<!-- Project -->
-			<div class="project-card">
+			<div class="project-card" onclick="openProjectModal('dyadic-association')">
 				<div class="project-image-placeholder"></div>
 				<div class="project-info">
 					<p class="project-title">Dyadic Association</p>
 					<p class="project-meta">UC Merced Research | May 2025</p>
-					<p class="project-desc">Human conversations are driven by associative thinking, where one idea naturally leads 
-						to another through semantic and cognitive relationships. Understanding these patterns is essential for 
-						developing conversational AI systems that communicate in ways that feel coherent, intuitive, and aligned 
-						with human reasoning. This research project explored how large language models emulate human associative 
-						behavior through dyadic word association. I contributed to the development of an automated system that 
-						orchestrated multi-turn interactions between two AI agents, ensuring stable turn-taking and consistent 
-						conversational flow under controlled experimental conditions. The system leveraged LLM APIs to simulate 
-						human association patterns while maintaining reproducible dialogue sequences for behavioral analysis. 
-						
-						Alongside implementation, I transcribed and structured human dyadic association sessions to produce clean 
-						datasets for computational modeling and comparison. By combining cognitive science, natural language 
-						processing, and software engineering, this research contributes to a deeper understanding of the similarities 
-						and differences between human and AI language behavior. The project demonstrates how carefully designed 
-						conversational systems can support the study of semantic reasoning and inform the development of more natural 
-						and human-centered AI interactions.
-</p>
+					<p class="project-desc"></p>
 				</div>
 			</div>
 			<!-- Project -->
-			<div class="project-card">
+			<div class="project-card" onclick="openProjectModal('bart-track')">
 				<div class="project-image-placeholder"></div>
 				<div class="project-info">
 					<p class="project-title">BART Track Inspection</p>
 					<p class="project-meta">Bay Area Rapid Transit (BART) Internship | May 2025</p>
-					<p class="project-desc">This project was developed as part of my capstone work to improve the
-					efficiency and reliability of track inspections for Bay Area Rapid Transit (BART). Track inspections are 
-					traditionally performed manually, which can be time-consuming and prone to human error. The goal of this 
-					project was to design and implement an automated system capable of analyzing track inspection videos and 
-					identifying missing or damaged cover boards. The system processes uploaded inspection videos, extracts frames, 
-					applies a machine learning model to detect anomalies, and generates structured reports summarizing findings.
-					By automating this workflow, the project aims to reduce manual effort, improve consistency, and provide 
-					actionable insights for maintenance teams. This project integrates computer vision, cloud-based machine
-					learning services, and user interface development into a complete end-to-end pipeline</p>
+					<p class="project-desc"></p>
 				</div>
 			</div>
 		</div>
@@ -128,9 +92,7 @@
 			<h3>ABOUT</h3>
 			<h2>Bridging technical complexity and human-centered clarity</h2>
 			<p>Hi, I’m Anvita Kisara! I’m a UX/UI Designer dedicated to bridging the gap between human behavior and digital design. I love the process of design to development. Whether it's sketching wireframes or thinking through the logic behind a system, I relish every step of the creative process. My journey into UX has been marked by a commitment to understanding not just how something works, but why it should work that way for the people using it.
-				
-				I majored in Computer Science and Engineering during my undergrad, where I learned to think systematically about problems. Through my projects, I gained hands-on experience translating technical constraints into real-world solutions, building a solid foundation in engineering and problem-solving. Building on that foundation, I've been developing my skills in user-centered design: conducting user research, building journey maps and personas, and creating prototypes that meet end-users' specific needs. My technical background gave me a strong sense of functionality; this shift has pushed me to lead with empathy and center the human experience in every design decision.
-				
+				I majored in Computer Science and Engineering during my undergrad, where I learned to think systematically about problems. Through my projects, I gained hands-on experience translating technical constraints into real-world solutions, building a solid foundation in engineering and problem-solving. Building on that foundation, I've been developing my skills in user-centered design: conducting user research, building journey maps and personas, and creating prototypes that meet end-users' specific needs. My technical background gave me a strong sense of functionality; this shift has pushed me to lead with empathy and center the human experience in every design decision.		
 				With this combined foundation in engineering and design, I'm excited to bring that same care to work that genuinely improves people's lives by designing experiences that make wellness and health information more accessible, intuitive, and human-centered.</p>
 		</div>
 
@@ -140,7 +102,7 @@
 				<li>User Research</li>
 				<li>Interaction Design</li>
 				<li>Figma</li>
-				<li>Data Analysis & Interpretation</li>
+				<li>Data Analysis &amp; Interpretation</li>
 				<li>Human-Centered Design</li>
 				<li>GUI Development</li>
 				<li>Python</li>
@@ -152,11 +114,357 @@
 	
 	<!-- Connect Section -->
 	<div id="connect" class="connect-container">
-		<h3>LET'S CONNECT!</h3>
 		<div class="connect-card">
-			<p>LinkedIn, GitHub icons</p>
+			<p class="connect-label">CONNECT</p>
+			<h2 class="connect-heading">Let's shape a positive future together</h2>
+			<p class="connect-text">Design is more than a visual language. It is a tool for transformation. If you are building a team that values purposeful, human-centered solutions, I'd love to talk.</p>
+			<a href="mailto:anvitakisara@gmail.com" class="connect-button">
+				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
+				anvitakisara@gmail.com
+			</a>
+			<hr class="connect-divider">
+			<div class="connect-links">
+				<a href="https://www.linkedin.com/in/anvita-kisara-623b1225a/" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+					LinkedIn
+					<svg class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+				</a>
+				<a href="https://github.com/anviks1118" target="_blank">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+					GitHub
+					<svg class="ext-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+				</a>
+			</div>
 		</div>
 	</div>
+
+	<!-- Project Detail Modal -->
+	<div id="project-modal-overlay" class="modal-overlay" onclick="closeProjectModal(event)">
+		<div class="modal-box">
+			<button class="modal-close" onclick="closeProjectModal(event)" aria-label="Close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+			</button>
+			<div class="modal-image-placeholder" id="modal-image"></div>
+			<div class="modal-content">
+				<p class="modal-meta" id="modal-meta"></p>
+				<h2 class="modal-title" id="modal-title"></h2>
+				<p class="modal-desc" id="modal-desc"></p>
+				<div id="modal-intro-image"></div>
+				<div id="modal-tech" class="modal-tech"></div>
+				<div id="modal-extra"></div>
+				<button class="modal-back-button" onclick="closeProjectModal(event)">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+					Back to home
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const projectData = {
+
+			// PREDICTIVE TEXT APP ****
+			'predictive-text': {
+				title: 'Predictive Text App',
+				meta: 'UC Merced Internship | May 2026',
+				thumbClass: 'thumb-blue',
+				techStack: [
+					{
+						category: 'Programming Languages',
+						items: ['JavaScript (ES6+)', 'HTML5', 'CSS3', 'JSON']
+					},
+					{
+						category: 'Frameworks & Libraries',
+						items: ['React 19', 'React DOM', 'React Router DOM', 'Vite', 'ESLint']
+					}
+				],
+				desc: `This project was developed to analyze user typing behavior and explore how predictive text features can enhance the text entry experience. Rather than focusing solely on generating word suggestions, the application captures detailed interaction data to better understand how users communicate and interact with a text editor.
+						The goal of this project was to design and implement an interactive text analysis application that records user behaviors throughout a typing session. The system tracks spelling and grammar mistakes, predictive text suggestions, and keyboard interactions such as shortcut usage and editing actions.
+						Once the user finishes typing, the application compiles these interactions into a metrics dashboard that summarizes typing patterns, editing behavior, and overall text entry performance. By combining real-time text analysis with behavioral metrics, this project demonstrates how user interaction data can provide valuable insights into typing habits and interface usability. It integrates human-computer interaction principles, event-driven software development, and data visualization to create an application that supports both user behavior analysis and intelligent text assistance.`,
+
+			sections: [
+					{
+						heading: 'Overview of Files and Technologies Used',
+						paragraphs: [
+							"The technical architecture of the Predictive Text App is built on a clean, decoupled frontend stack designed to function seamlessly as a high-fidelity data collection instrument. At the structural core, the index.html file provides an accessible, responsive viewport configuration while utilizing preconnected links to the Google Fonts API to load the highly legible Inter typeface with minimal latency. Visual semantics and cognitive load management are controlled via the style.css file, which implements a soothing, low-contrast color palette, fluid CSS Grid and Flexbox layouts, and subtle micro-interactions to promote a deep-focus writing state without distracting visual clutter. The engine of the platform is powered by React and JavaScript (ES6+), utilizing component state management to orchestrate real-time UI changes—such as live writing statistics and persistent prompt overlays—while simultaneously decoupling data ingestion from the rendering thread. By hooking deeply into native browser web APIs via event-driven programming, the system continuously intercepting raw user interaction streams (onKeyDown, onSelectionChange, onPaste) to log micro-behaviors like typing cadence, deletion events, and clipboard updates efficiently without causing input lag or degrading application performance."
+						]
+					},
+					{
+						heading: 'Analysis',
+						paragraphs: [
+							"From a system architecture perspective, this platform functions as a high-fidelity data ingestion pipeline disguised as a minimalist text editor. The engineering complexity lies in the asynchronous event-handling layer. In a typical React application, user inputs are captured strictly to update the state of the view (e.g., updating a text string in a text area). In this application, a single keystroke triggers a parallel execution track: updating the user interface synchronously while simultaneously generating, processing, and queuing behavioral data packets (tracking deletions, typing cadence, clipboard interrupts, and cursor coordinates) asynchronously. The front-end design successfully decouples data collection logic from the rendering thread, ensuring that the intensive telemetry logging never drops frames or causes input lag—a critical UX requirement, as input latency would inherently distort natural human typing behavior and ruin the validity of the research data."
+						]
+					},
+					{
+						heading: 'Reflection',
+						paragraphs: [
+							"Data Quality Requires Intentional Design: I learned that collecting high-quality behavioral data requires much more than simply recording user input. Every interface decision, from layout organization to event handling—influences how naturally users interact with a system, which directly impacts data integrity. Designing for the User, Not the Tech: Features like disabled action states, responsive layouts, fullscreen image previews, and persistent writing prompts were implemented not because they were complex to code, but because they radically improved usability and reduced interruptions during writing sessions. Performance-Minded Engineering: Implementing simultaneous event listeners for keyboard, mouse, selection, clipboard, and text input events provided excellent hands-on experience with advanced React event handling. It reinforced the absolute importance of writing modular, maintainable code that can capture deep metrics without degrading application performance."
+						]
+					}
+				],
+
+				table: {
+					goodHeader: 'The Good',
+					badHeader: 'The Bad',
+					good: [
+						'Captures detailed behavioral data beyond simple text input, making it valuable for HCI research.',
+						'Real-time monitoring of keyboard, mouse, clipboard, and selection events provides rich interaction data.',
+						'Responsive interface provides a clean, distraction-free writing environment.',
+						'Guided workflow with participant validation helps ensure consistent and reliable data collection.',
+						'Reacts component architecture makes the application modular and easier to maintain or extend.',
+						'Image prompts and persistent topic reminders help maintain user engagement throughout writing sessions.',
+					],
+					bad: [
+						'.'
+					]
+				}
+			},
+
+			// DYADIC ASSOCIATION ****
+			'dyadic-association': {
+				title: 'Dyadic Association',
+				meta: 'UC Merced Research | May 2025',
+				thumbClass: 'thumb-green',
+				techStack: [
+					{
+						category: 'Programming Languages',
+						items: ['Python']
+					},
+					{
+						category: 'Frameworks & APIs',
+						items: ['OpenAI API', 'REST APIs']
+					},
+					{
+						category: 'Tools',
+						items: ['Git', 'JSON']
+					}
+				],
+				desc: `Human conversations are driven by associative thinking, where one idea naturally leads to another through semantic and cognitive relationships. Understanding these patterns is essential for developing conversational AI systems that communicate in ways that feel coherent, intuitive, and aligned with human reasoning.
+						This research project explored how large language models emulate human associative behavior through dyadic word association. I contributed to the development of an automated system that orchestrated multi-turn interactions between two AI agents, ensuring stable turn-taking and consistent conversational flow under controlled experimental conditions. The system leveraged LLM APIs to simulate human association patterns while maintaining reproducible dialogue sequences for behavioral analysis.
+						Alongside implementation, I transcribed and structured human dyadic association sessions to produce clean datasets for computational modeling and comparison. By combining cognitive science, natural language processing, and software engineering, this research contributes to a deeper understanding of the similarities and differences between human and AI language behavior. The project demonstrates how carefully designed conversational systems can support the study of semantic reasoning and inform the development of more natural and human-centered AI interactions.`,
+			
+			sections: [
+					{
+						heading: 'Overview of Files and Technologies Used',
+						paragraphs: [
+							"The Dyadic Association project was developed using Python as the primary programming language to automate cognitive science experiments investigating associative reasoning between Large Language Models (LLMs). The application consisted of modular components responsible for conversation orchestration, API communication, prompt generation, transcript processing, and structured data collection. A central conversation manager maintained coherent multi-turn interactions by coordinating alternating turn-taking between AI agents while preserving conversational context throughout each experiment. LLM APIs were integrated to generate human-like associative responses, with JSON used to structure prompts, responses, and experimental metadata. Supporting scripts automated transcript processing and organized conversation logs into research-ready datasets for linguistic and semantic analysis. Version control was managed using Git, enabling collaborative development with my faculty mentor and Ph.D. researcher. The modular architecture allowed the system to be easily expanded for future experiments while ensuring reliable, reproducible conversational workflows for Human-Computer Interaction and cognitive science research."
+						]
+					},
+					{
+						heading: 'Analysis',
+						paragraphs: [
+							"The objective of the Dyadic Association Project was to automate a traditionally manual cognitive science experiment by developing a system capable of facilitating structured conversations between two Large Language Models. The project focused on reproducing human free-association experiments in a controlled computational environment, allowing researchers to compare human linguistic behavior with AI-generated associative reasoning.",
+						"One of the primary technical challenges involved maintaining coherent conversational flow across multiple interaction rounds. Unlike a simple chatbot that responds independently to each prompt, the system needed to preserve conversational context, alternate speakers correctly, and ensure that each response reflected the evolving dialogue. This required implementing conversation orchestration logic that managed turn-taking, prompt sequencing, and API communication while preventing interruptions or inconsistent dialogue states.",
+						"From a Human-Computer Interaction perspective, the project emphasized designing reliable interaction systems rather than user-facing interfaces. The quality of the collected research data depended on the stability and consistency of the conversational framework. Small implementation details—such as preserving context between turns, handling API failures gracefully, and maintaining reproducible experimental conditions—directly affected the validity of the resulting datasets.",
+						"The project also highlighted the intersection of artificial intelligence and cognitive science. By automating conversational experiments, researchers could generate significantly larger datasets than would be practical through manual human studies alone. This scalability enables broader investigations into semantic association, language production, and similarities between human and AI communication while reducing the time required to conduct experiments."
+						]
+					},
+					{
+						heading: 'Reflection',
+						paragraphs: [
+							"Working on the Dyadic Association Project gave me valuable experience collaborating within an interdisciplinary research environment where software engineering directly supported cognitive science research. Rather than building software for consumer applications, I developed tools that enabled researchers to conduct experiments more efficiently and consistently. One of the most rewarding aspects of the project was learning how technical implementation influences research quality. Building reliable conversation orchestration required thinking beyond writing functional code; I had to ensure that each interaction followed consistent experimental procedures while preserving the natural flow of conversation. This experience strengthened my appreciation for designing systems that prioritize reliability, reproducibility, and data integrity. The project also improved my ability to collaborate across disciplines. Throughout development, I worked closely with my faculty mentor and Ph.D. researcher, regularly discussing implementation decisions, reporting progress, and refining the system based on evolving research objectives. Translating research requirements into technical solutions taught me how to communicate effectively with stakeholders who approached problems from different academic perspectives. Perhaps the most significant takeaway was seeing how artificial intelligence can be used as a research tool rather than simply an end product. Developing this platform reinforced my interest in Human-Computer Interaction by demonstrating how thoughtful system design can facilitate meaningful investigations into human cognition, language, and interaction. It strengthened my passion for building technologies that bridge software engineering, AI, and user-centered research."
+						]
+					}
+				],
+
+				table: {
+					goodHeader: 'The Good',
+					badHeader: 'The Bad',
+					good: [
+						'Automated a traditionally manual cognitive science experiment, increasing research efficiency.',
+						'Produced structured, reproducible conversational datasets suitable for large-scale analysis.',
+						'Modular conversation orchestration allows future experimental expansion.',
+						'Simulated multi-turn dialogue while maintaining coherent conversational flow.',
+						'Reduced researcher workload by automating transcript generation and data collection.',
+						'Strengthened interdisciplinary collaboration between computer science and cognitive science research.'
+					],
+					bad: [
+						'.'
+					]
+				}
+			},
+
+			// BART ****
+			'bart-track': {
+				title: 'BART Track Inspection',
+				meta: 'Bay Area Rapid Transit (BART) Internship | May 2025',
+				thumbClass: 'thumb-purple',
+				introImage: 'images/bart/bart-intro-detection.jpg',
+				techStack: [
+					{
+						category: 'Programming Languages',
+						items: ['Python']
+					},
+					
+					{
+						category: 'Frameworks & Libraries',
+						items: ['PyQt5: User Interface development', 'OpenCV: Video frame extraction', 'ReportLab / PDF libraries: PDF report generation', 'SQLite: Local database storage', 'Pytest: Testing framework']
+					},
+					
+					{
+						category: 'Cloud & APIs',
+						items: ['AWS Rekognition: Object detection and anomaly identification', 'FastAPI: Backend API integration']
+					},
+
+					{
+						category: 'Other Tools',
+						items: ['Git / GitHub: Version control', 'JSON: Data formatting and intermediate storage']
+					}
+
+				],				
+				desc: `This project was developed as part of my capstone work to improve the efficiency and reliability of track inspections for Bay Area Rapid Transit (BART). Track inspections are traditionally performed manually, which can be time-consuming and prone to human error.
+						The goal of this project was to design and implement an automated system capable of analyzing track inspection videos and identifying missing or damaged cover boards. The system processes uploaded inspection videos, extracts frames, applies a machine learning model to detect anomalies, and generates structured reports summarizing findings.
+						By automating this workflow, the project aims to reduce manual effort, improve consistency, and provide actionable insights for maintenance teams. This project integrates computer vision, cloud-based machine learning services, and user interface development into a complete end-to-end pipeline.`,
+
+				sections: [
+					{
+						heading: 'Overview of Files and Technologies Used',
+						images: ['images/bart/bart-overview-1.jpg', 'images/bart/bart-overview-2.jpg'],
+						paragraphs: [
+							"For my capstone project, I developed an automated track inspection system for BART that analyzes inspection videos to detect missing or damaged cover boards. The goal was to reduce manual inspection time and improve reliability by creating a complete end-to-end pipeline.",
+							"The system includes a PyQt-based user interface for uploading multiple video files, frame extraction using OpenCV, anomaly detection through AWS Rekognition, and automated PDF report generation with timestamps, location metadata, and confidence scores.",
+							"Results are stored in a SQLite database and optionally sent to a FastAPI endpoint for integration. This project required coordinating video processing, cloud-based inference, report generation, and user interface design while maintaining performance and usability.",
+							"Through this experience, I strengthened my skills in system design, debugging complex pipelines, and building user-centered tools, and I gained insight into balancing technical accuracy with practical usability."
+						]
+					},
+					{
+						heading: 'Analysis',
+						images: ['images/bart/bart-analysis-1.jpg', 'images/bart/bart-analysis-2.jpg'],
+						paragraphs: [
+							"This project demonstrates the design of a full end-to-end automated inspection pipeline. One of the main challenges involved coordinating multiple components, including video processing, cloud-based inference, and report generation, while maintaining performance and reliability.",
+							"Handling large video files required efficient frame extraction and batching techniques to avoid excessive processing time. Additionally, ensuring that detection results were correctly aligned with timestamps and metadata required careful data structuring and validation. Another important aspect was designing a user-friendly interface.",
+							"The PyQt application was developed to support multiple file uploads, individual and batch downloads, and real-time status updates. This improved usability and allowed users to process multiple inspections simultaneously.",
+							"The integration of AWS Rekognition introduced challenges related to API latency and error handling. To address this, the pipeline included retry mechanisms and logging to ensure reliability. Overall, this project emphasizes system design, scalability considerations, and real-world usability."
+						]
+					},
+					{
+						heading: 'Reflection',
+						paragraphs: [
+							"This project strengthened my understanding of building complete systems that integrate machine learning, user interfaces, and cloud services. I gained experience designing modular pipelines, handling asynchronous processes, and ensuring reliability across multiple components. One of the most valuable lessons was learning how to balance technical performance with usability. While developing the detection pipeline was important, ensuring that the interface was intuitive and useful for end users was equally critical.",
+							"Additionally, working on this project improved my ability to debug complex systems, manage dependencies, and structure code for maintainability. I also gained experience in testing and validating results, which reinforced the importance of reliability in real-world applications. If I were to extend this project further, I would explore improving detection accuracy using a custom-trained model, implementing real-time processing capabilities, and deploying the system as a scalable cloud service.",
+							"This project reinforced my interest in designing intelligent systems that assist people and improve operational workflows, which aligns with my goals for graduate study."
+						]
+					}
+				],
+
+				table: {
+					goodHeader: 'The Good',
+					badHeader: 'The Bad',
+					good: [
+						'Strong end-to-end pipeline: video upload → frame processing → detection (AWS Rekognition) → report generation → storage/download.',
+						'Clear real-world application (rail inspection), which makes the project feel meaningful and industry-relevant.',
+						'PyQt UI supports <strong>multi-file upload and per-file processing</strong>, which improves usability over a single-file system.'
+					],
+					bad: [
+						'Heavy reliance on AWS Rekognition, which can become <strong>costly</strong> at scale.'
+					]
+				}
+			}
+		};
+
+		function openProjectModal(projectId) {
+			const data = projectData[projectId];
+			if (!data) return;
+
+			document.getElementById('modal-title').textContent = data.title;
+			document.getElementById('modal-meta').textContent = data.meta;
+			document.getElementById('modal-desc').textContent = data.desc;
+
+			const introImageContainer = document.getElementById('modal-intro-image');
+			introImageContainer.innerHTML = data.introImage
+				? `<img src="${data.introImage}" alt="${data.title}" class="modal-intro-image">`
+				: '';
+
+			const techContainer = document.getElementById('modal-tech');
+			if (data.techStack && data.techStack.length > 0) {
+				techContainer.innerHTML = data.techStack.map(group => `
+					<div class="tech-group">
+						<p class="tech-category">${group.category}</p>
+						<ul class="tech-list">
+							${group.items.map(item => `<li>${item}</li>`).join('')}
+						</ul>
+					</div>
+				`).join('');
+			} else {
+				techContainer.innerHTML = '';
+			}
+
+			const extraContainer = document.getElementById('modal-extra');
+			let extraHTML = '';
+
+			if (data.sections && data.sections.length > 0) {
+				extraHTML += data.sections.map(section => `
+					<div class="modal-section">
+						<h3 class="modal-section-heading">${section.heading}</h3>
+						${section.paragraphs.map(p => `<p class="modal-section-text">${p}</p>`).join('')}
+						${section.images ? `
+							<div class="section-image-gallery">
+								${section.images.map(src => `<img src="${src}" alt="${section.heading}">`).join('')}
+							</div>
+						` : ''}
+					</div>
+				`).join('');
+			}
+
+			if (data.table) {
+				extraHTML += `
+					<div class="modal-section">
+						<table class="good-bad-table">
+							<thead>
+								<tr>
+									<th class="good-header">${data.table.goodHeader}</th>
+									<th class="bad-header">${data.table.badHeader}</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<ul class="good-bad-list">
+											${data.table.good.map(item => `<li>${item}</li>`).join('')}
+										</ul>
+									</td>
+									<td>
+										<ul class="good-bad-list">
+											${data.table.bad.map(item => `<li>${item}</li>`).join('')}
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				`;
+			}
+
+			extraContainer.innerHTML = extraHTML;
+
+			const modalImage = document.getElementById('modal-image');
+			modalImage.className = 'modal-image-placeholder ' + data.thumbClass;
+
+			const overlay = document.getElementById('project-modal-overlay');
+			overlay.classList.add('active');
+			document.body.classList.add('modal-open');
+
+			// Reset scroll position to top each time a new project opens
+			overlay.querySelector('.modal-box').scrollTop = 0;
+		}
+
+		function closeProjectModal(event) {
+			// Only close if the click was on the overlay itself or a close/back button,
+			// not on the modal content area
+			if (event.target.closest('.modal-close, .modal-back-button') || event.target.id === 'project-modal-overlay') {
+				document.getElementById('project-modal-overlay').classList.remove('active');
+				document.body.classList.remove('modal-open');
+			}
+		}
+
+		// Allow closing with the Escape key
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') {
+				document.getElementById('project-modal-overlay').classList.remove('active');
+				document.body.classList.remove('modal-open');
+			}
+		});
+	</script>
 </body>
 
 </html>
