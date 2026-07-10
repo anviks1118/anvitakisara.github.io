@@ -62,9 +62,33 @@ hr {
 /* --- Hero / Main Section --- */
 .main-container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 200px;
+    margin-bottom: 80px;
+}
+
+.main-text {
+    display: flex;
     flex-direction: column;
     gap: 15px;
-    margin-bottom: 80px;
+    flex: 0 1 auto;
+}
+
+.main-photo {
+    flex-shrink: 0;
+}
+
+.hero-photo {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+    border: 6px solid #ffffff;
+    box-shadow: 0 8px 25px rgba(42, 124, 186, 0.2);
 }
 
 .main-position p {
@@ -143,6 +167,27 @@ h3 {
     width: 100%;
     height: 180px;
     background-color: #bcd0ed; 
+}
+
+/* Pastel color variants for project grid thumbnails */
+.project-image-placeholder.thumb-blue {
+    background-color: #c9dcf5;
+}
+
+.project-image-placeholder.thumb-green {
+    background-color: #cfe8d9;
+}
+
+.project-image-placeholder.thumb-purple {
+    background-color: #ddd3f0;
+}
+
+.project-image-placeholder.thumb-orange {
+    background-color: #f6dfc4;
+}
+
+.project-image-placeholder.thumb-teal {
+    background-color: #c9ece5;
 }
 
 .project-info {
@@ -339,6 +384,21 @@ h3 {
         flex-direction: column;
         gap: 30px;
     }
+
+    .main-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .main-intro p {
+        max-width: 100%;
+    }
 }
 
 /* --- Project Detail Modal --- */
@@ -403,6 +463,28 @@ body.modal-open {
     border-radius: 16px 16px 0 0;
 }
 
+/* Thumbnail color variants used in the project modal header,
+   matching the pastel palette used on the project grid cards. */
+.modal-image-placeholder.thumb-blue {
+    background-color: #c9dcf5;
+}
+
+.modal-image-placeholder.thumb-green {
+    background-color: #cfe8d9;
+}
+
+.modal-image-placeholder.thumb-purple {
+    background-color: #ddd3f0;
+}
+
+.modal-image-placeholder.thumb-orange {
+    background-color: #f6dfc4;
+}
+
+.modal-image-placeholder.thumb-teal {
+    background-color: #c9ece5;
+}
+
 .modal-content {
     padding: 40px 56px 56px 56px;
     max-width: 760px;
@@ -435,10 +517,10 @@ body.modal-open {
 
 .modal-intro-image {
     display: block;
-    width: 100%;
+    width: 35%;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(42, 124, 186, 0.1);
-    margin: -12px 0 32px 0;
+    margin: -12px auto 32px auto;
 }
 
 .modal-tech {
@@ -463,8 +545,9 @@ body.modal-open {
     padding: 0;
     margin: 0;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 0.95rem;
-    color: #113854;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a7194;
 }
 
 .tech-list li {
@@ -511,15 +594,50 @@ body.modal-open {
     margin-bottom: 0;
 }
 
+.section-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 16px 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a7194;
+}
+
+.section-list > li {
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #113854;
+}
+
+.section-list > li:last-child {
+    margin-bottom: 0;
+}
+
+.section-sublist {
+    list-style: circle;
+    padding-left: 20px;
+    margin: 8px 0 0 0;
+    font-weight: 400;
+    color: #4a7194;
+}
+
+.section-sublist li {
+    margin-bottom: 0;
+}
+
 .section-image-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 16px;
     margin-top: 20px;
+    align-items: stretch;
 }
 
 .section-image-gallery img {
     width: 100%;
+    height: 320px;
+    object-fit: cover;
     display: block;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(42, 124, 186, 0.1);

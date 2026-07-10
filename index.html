@@ -36,15 +36,20 @@
 
 	<!-- Main Title and Tagline -->
 	<div class="main-container">
-		<div class="main-position">
-			<p>UX/UI ENGINEER</p>
+		<div class="main-text">
+			<div class="main-position">
+				<p>UX/UI ENGINEER</p>
+			</div>
+			<div class="main-title">
+				<h1>Designing interfaces</h1>
+				<h2>people understand</h2>
+			</div>
+			<div class="main-intro">
+				<p>I'm an aspiring UX Engineer who is passionate about making the digital world easier to navigate.</p>
+			</div>
 		</div>
-		<div class="main-title">
-			<h1>Designing interfaces</h1>
-			<h2>people understand</h2>
-		</div>
-		<div class="main-intro">
-			<p>I'm an aspiring UX Engineer who is passionate about making the digital world easier to navigate.</p>
+		<div class="main-photo">
+			<img src="images/anvita/anvita.JPG" alt="Anvita Kisara" class="hero-photo">
 		</div>
 	</div>
 
@@ -56,29 +61,47 @@
 		<div class="projects-grid">
 			<!-- Project -->
 			<div class="project-card" onclick="openProjectModal('predictive-text')">
-				<div class="project-image-placeholder"></div>
+				<div class="project-image-placeholder thumb-blue"></div>
 				<div class="project-info">
 					<p class="project-title">Predictive Text App</p>
 					<p class="project-meta">UC Merced Internship | May 2026</p>
-					<p class="project-desc"></p>
+					<p class="project-desc">A React-based web application that captures and analyzes user writing behavior through real-time keyboard, mouse, and text interaction data for Human-Computer Interaction research.</p>
 				</div>
 			</div>
 			<!-- Project -->
 			<div class="project-card" onclick="openProjectModal('dyadic-association')">
-				<div class="project-image-placeholder"></div>
+				<div class="project-image-placeholder thumb-green"></div>
 				<div class="project-info">
 					<p class="project-title">Dyadic Association</p>
 					<p class="project-meta">UC Merced Research | May 2025</p>
-					<p class="project-desc"></p>
+					<p class="project-desc">A cognitive science research project that automated AI-to-AI word association experiments using Large Language Models to study semantic reasoning and conversational behavior.</p>
 				</div>
 			</div>
 			<!-- Project -->
 			<div class="project-card" onclick="openProjectModal('bart-track')">
-				<div class="project-image-placeholder"></div>
+				<div class="project-image-placeholder thumb-purple"></div>
 				<div class="project-info">
 					<p class="project-title">BART Track Inspection</p>
 					<p class="project-meta">Bay Area Rapid Transit (BART) Internship | May 2025</p>
-					<p class="project-desc"></p>
+					<p class="project-desc">A computer vision inspection system that automates the detection of damaged and missing BART track cover boards using AI-powered image analysis.</p>
+				</div>
+			</div>
+			<!-- Project -->
+			<div class="project-card" onclick="openProjectModal('esn-cognitive-modeling')">
+				<div class="project-image-placeholder thumb-orange"></div>
+				<div class="project-info">
+					<p class="project-title">Echo State Networks for Sequential Cognitive Modeling</p>
+					<p class="project-meta">UC Merced Research | August 2025</p>
+					<p class="project-desc">A computational cognitive science research project investigating Echo State Networks for modeling and analyzing sequential cognitive processes.</p>
+				</div>
+			</div>
+			<!-- Project -->
+			<div class="project-card" onclick="openProjectModal('yig-array-research')">
+				<div class="project-image-placeholder thumb-teal"></div>
+				<div class="project-info">
+					<p class="project-title">YIG Sphere Array Spin Resonance Research</p>
+					<p class="project-meta">UC Merced Research | September 2024</p>
+					<p class="project-desc">A physics research project investigating spin resonance behavior in Yttrium Iron Garnet (YIG) sphere arrays under controlled magnetic fields.</p>
 				</div>
 			</div>
 		</div>
@@ -92,7 +115,9 @@
 			<h3>ABOUT</h3>
 			<h2>Bridging technical complexity and human-centered clarity</h2>
 			<p>Hi, I’m Anvita Kisara! I’m a UX/UI Designer dedicated to bridging the gap between human behavior and digital design. I love the process of design to development. Whether it's sketching wireframes or thinking through the logic behind a system, I relish every step of the creative process. My journey into UX has been marked by a commitment to understanding not just how something works, but why it should work that way for the people using it.
+				
 				I majored in Computer Science and Engineering during my undergrad, where I learned to think systematically about problems. Through my projects, I gained hands-on experience translating technical constraints into real-world solutions, building a solid foundation in engineering and problem-solving. Building on that foundation, I've been developing my skills in user-centered design: conducting user research, building journey maps and personas, and creating prototypes that meet end-users' specific needs. My technical background gave me a strong sense of functionality; this shift has pushed me to lead with empathy and center the human experience in every design decision.		
+				
 				With this combined foundation in engineering and design, I'm excited to bring that same care to work that genuinely improves people's lives by designing experiences that make wellness and health information more accessible, intuitive, and human-centered.</p>
 		</div>
 
@@ -179,8 +204,10 @@
 					}
 				],
 				desc: `This project was developed to analyze user typing behavior and explore how predictive text features can enhance the text entry experience. Rather than focusing solely on generating word suggestions, the application captures detailed interaction data to better understand how users communicate and interact with a text editor.
-						The goal of this project was to design and implement an interactive text analysis application that records user behaviors throughout a typing session. The system tracks spelling and grammar mistakes, predictive text suggestions, and keyboard interactions such as shortcut usage and editing actions.
-						Once the user finishes typing, the application compiles these interactions into a metrics dashboard that summarizes typing patterns, editing behavior, and overall text entry performance. By combining real-time text analysis with behavioral metrics, this project demonstrates how user interaction data can provide valuable insights into typing habits and interface usability. It integrates human-computer interaction principles, event-driven software development, and data visualization to create an application that supports both user behavior analysis and intelligent text assistance.`,
+					
+				The goal of this project was to design and implement an interactive text analysis application that records user behaviors throughout a typing session. The system tracks spelling and grammar mistakes, predictive text suggestions, and keyboard interactions such as shortcut usage and editing actions.
+				
+				Once the user finishes typing, the application compiles these interactions into a metrics dashboard that summarizes typing patterns, editing behavior, and overall text entry performance. By combining real-time text analysis with behavioral metrics, this project demonstrates how user interaction data can provide valuable insights into typing habits and interface usability. It integrates human-computer interaction principles, event-driven software development, and data visualization to create an application that supports both user behavior analysis and intelligent text assistance.`,
 
 			sections: [
 					{
@@ -199,6 +226,28 @@
 						heading: 'Reflection',
 						paragraphs: [
 							"Data Quality Requires Intentional Design: I learned that collecting high-quality behavioral data requires much more than simply recording user input. Every interface decision, from layout organization to event handling—influences how naturally users interact with a system, which directly impacts data integrity. Designing for the User, Not the Tech: Features like disabled action states, responsive layouts, fullscreen image previews, and persistent writing prompts were implemented not because they were complex to code, but because they radically improved usability and reduced interruptions during writing sessions. Performance-Minded Engineering: Implementing simultaneous event listeners for keyboard, mouse, selection, clipboard, and text input events provided excellent hands-on experience with advanced React event handling. It reinforced the absolute importance of writing modular, maintainable code that can capture deep metrics without degrading application performance."
+						]
+					},
+					{
+						heading: 'Challenges: Balancing Data with Usability',
+						paragraphs: [
+							"A significant design consideration involved balancing comprehensive data collection with seamless usability. The application continuously monitors keyboard and mouse interactions—including typing speed, deletion events, cursor positioning, text selection, and clipboard usage—without disrupting the user's natural writing flow. Implementing these intensive event listeners required careful performance coordination to ensure accurate behavioral logging while maintaining a highly responsive interface."
+						]
+					},
+					{
+						heading: 'HCI & Interaction Design Decisions',
+						paragraphs: [
+							'From a Human-Computer Interaction (HCI) perspective, the interface was intentionally designed to minimize cognitive load:',
+						],
+						list: [
+							{
+								label: 'Visual Clarity',
+								text: 'A palette of neutral colors, a clean layout, consistent typography, and responsive spacing help users focus entirely on writing rather than navigating the tool.'
+							},
+							{
+								label: 'Contextual Support',
+								text: 'Features such as image-based prompts, persistent topic overlays, and real-time writing statistics provide useful contextual information without interfering with the composition process.'
+							}
 						]
 					}
 				],
@@ -219,7 +268,76 @@
 					]
 				}
 			},
+			// ECHO STATE NETWORKS ****
+			'esn-cognitive-modeling': {
+				title: 'Echo State Networks for Sequential Cognitive Modeling',
+				meta: 'UC Merced Research | August 2025',
+				thumbClass: 'thumb-orange',
+				techStack: [
+					{
+						category: 'Programming Languages',
+						items: ['Python']
+					},
+					{
+						category: 'Frameworks & Libraries',
+						items: ['ReservoirPy', 'NumPy', 'Matplotlib', 'Scikit-learn']
+					},
+					{
+						category: 'Other Tools',
+						items: ['Git', 'GitHub', 'Jupyter Notebook', 'Japanese Vowels Dataset']
+					}
+				],
+				desc: `Conducted in UC Merced's Cognitive Science Lab, this project explored how Echo State Networks (ESNs)—a specialized type of recurrent neural network—can capture temporal dependencies in time-series data while maintaining computational efficiency. Using the Japanese Vowels benchmark dataset, I implemented, configured, and evaluated ESN models to better understand how dynamic neural systems process sequential information.
+						
+				The project combined machine learning, computational modeling, and data analysis to support research into cognitive processes and temporal pattern recognition, applying reservoir computing to model and classify sequential data within a cognitive science research setting.`,
 
+				sections: [
+					{
+						heading: 'Overview of Files and Technologies Used',
+						paragraphs: [
+							"The project consisted of modular Python scripts responsible for data preprocessing, model configuration, training, evaluation, and visualization. Sequential speech data from the Japanese Vowels dataset was cleaned and formatted before being processed through Echo State Network architectures built using ReservoirPy. Separate modules handled reservoir initialization, hyperparameter configuration, model training, prediction, and performance evaluation, while visualization scripts generated plots to analyze classification accuracy and reservoir behavior.",
+							"NumPy enabled efficient numerical computations, Matplotlib produced graphical representations of experimental results, and Scikit-learn assisted with preprocessing and evaluation metrics. Git and GitHub supported version control throughout development, and Jupyter Notebook provided an interactive environment for experimentation and iterative testing. The modular structure allowed experiments to be easily modified, making it possible to test different reservoir configurations and compare model performance across multiple experimental conditions. This project did not rely on cloud computing or external APIs; all experiments were run locally."
+						]
+					},
+					{
+						heading: 'Analysis',
+						paragraphs: [
+							"The primary objective of this project was to investigate how Echo State Networks could effectively model temporal dependencies in sequential data while maintaining computational efficiency. Unlike traditional recurrent neural networks, ESNs require training only the readout layer, allowing the fixed reservoir to encode complex temporal patterns without the high computational costs associated with backpropagation through time. This made reservoir computing particularly well suited for sequence classification tasks such as the Japanese Vowels dataset.",
+							"Throughout the project, experimentation focused on understanding how reservoir parameters—including spectral radius, reservoir size, and connectivity—influenced model performance. Small adjustments to these hyperparameters often produced significant changes in classification accuracy, demonstrating the sensitivity of reservoir dynamics and the importance of careful experimental tuning.",
+							"From a cognitive science perspective, the project highlighted how computational models can simulate aspects of temporal information processing observed in biological neural systems. Rather than simply maximizing prediction accuracy, the research emphasized understanding how recurrent neural dynamics encode sequential information and how these representations contribute to successful classification."
+						]
+					},
+					{
+						heading: 'Reflection',
+						paragraphs: [
+							"Working on the Echo State Networks project introduced me to an area of machine learning that extended beyond conventional supervised learning and into computational models inspired by neural dynamics. I gained practical experience implementing reservoir computing architectures, preprocessing sequential datasets, and systematically evaluating model performance through experimentation.",
+							"One of the most valuable lessons from this research was learning that successful machine learning models depend not only on implementation but also on thoughtful experimentation. Adjusting reservoir hyperparameters required careful observation, repeated testing, and critical analysis of model behavior rather than relying on default configurations. This iterative process strengthened my analytical thinking and improved my ability to interpret experimental results.",
+							"The project also deepened my appreciation for interdisciplinary research by demonstrating how machine learning techniques can contribute to cognitive science. Understanding how recurrent neural systems process temporal information provided insight into both artificial intelligence and theories of human cognition, and reinforced my interest in applying computational methods to research problems involving human cognition and intelligent systems."
+						]
+					}
+				],
+
+				table: {
+					goodHeader: 'The Good',
+					badHeader: 'The Bad',
+					good: [
+						'Explored an efficient recurrent neural network architecture for sequence modeling.',
+						'Provided hands-on experience with reservoir computing and temporal machine learning models.',
+						'Strengthened understanding of sequential data processing and cognitive modeling.',
+						'Modular implementation allowed experiments to be repeated and extended easily.',
+						'Reinforced reproducible research practices through systematic experimentation and evaluation.',
+						'Connected machine learning concepts with computational cognitive science research.'
+					],
+					bad: [
+						'Model performance was highly sensitive to hyperparameter selection, requiring extensive experimentation.',
+						'Echo State Networks are less commonly used than modern deep learning architectures, limiting available documentation and community support.',
+						'Classification performance depended heavily on reservoir configuration and dataset preprocessing.',
+						'Results were evaluated on a benchmark dataset rather than more diverse real-world sequential data.',
+						'Interpreting reservoir dynamics can be challenging because internal representations are not always easily explainable.'
+					]
+				}
+			},
+			
 			// DYADIC ASSOCIATION ****
 			'dyadic-association': {
 				title: 'Dyadic Association',
@@ -240,8 +358,10 @@
 					}
 				],
 				desc: `Human conversations are driven by associative thinking, where one idea naturally leads to another through semantic and cognitive relationships. Understanding these patterns is essential for developing conversational AI systems that communicate in ways that feel coherent, intuitive, and aligned with human reasoning.
-						This research project explored how large language models emulate human associative behavior through dyadic word association. I contributed to the development of an automated system that orchestrated multi-turn interactions between two AI agents, ensuring stable turn-taking and consistent conversational flow under controlled experimental conditions. The system leveraged LLM APIs to simulate human association patterns while maintaining reproducible dialogue sequences for behavioral analysis.
-						Alongside implementation, I transcribed and structured human dyadic association sessions to produce clean datasets for computational modeling and comparison. By combining cognitive science, natural language processing, and software engineering, this research contributes to a deeper understanding of the similarities and differences between human and AI language behavior. The project demonstrates how carefully designed conversational systems can support the study of semantic reasoning and inform the development of more natural and human-centered AI interactions.`,
+						
+				This research project explored how large language models emulate human associative behavior through dyadic word association. I contributed to the development of an automated system that orchestrated multi-turn interactions between two AI agents, ensuring stable turn-taking and consistent conversational flow under controlled experimental conditions. The system leveraged LLM APIs to simulate human association patterns while maintaining reproducible dialogue sequences for behavioral analysis.
+				
+				Alongside implementation, I transcribed and structured human dyadic association sessions to produce clean datasets for computational modeling and comparison. By combining cognitive science, natural language processing, and software engineering, this research contributes to a deeper understanding of the similarities and differences between human and AI language behavior. The project demonstrates how carefully designed conversational systems can support the study of semantic reasoning and inform the development of more natural and human-centered AI interactions.`,
 			
 			sections: [
 					{
@@ -289,7 +409,7 @@
 				title: 'BART Track Inspection',
 				meta: 'Bay Area Rapid Transit (BART) Internship | May 2025',
 				thumbClass: 'thumb-purple',
-				introImage: 'images/bart/bart-intro-detection.jpg',
+				introImage: 'images/bart/Intro.png',
 				techStack: [
 					{
 						category: 'Programming Languages',
@@ -313,13 +433,15 @@
 
 				],				
 				desc: `This project was developed as part of my capstone work to improve the efficiency and reliability of track inspections for Bay Area Rapid Transit (BART). Track inspections are traditionally performed manually, which can be time-consuming and prone to human error.
-						The goal of this project was to design and implement an automated system capable of analyzing track inspection videos and identifying missing or damaged cover boards. The system processes uploaded inspection videos, extracts frames, applies a machine learning model to detect anomalies, and generates structured reports summarizing findings.
-						By automating this workflow, the project aims to reduce manual effort, improve consistency, and provide actionable insights for maintenance teams. This project integrates computer vision, cloud-based machine learning services, and user interface development into a complete end-to-end pipeline.`,
+					
+				The goal of this project was to design and implement an automated system capable of analyzing track inspection videos and identifying missing or damaged cover boards. The system processes uploaded inspection videos, extracts frames, applies a machine learning model to detect anomalies, and generates structured reports summarizing findings.
+				
+				By automating this workflow, the project aims to reduce manual effort, improve consistency, and provide actionable insights for maintenance teams. This project integrates computer vision, cloud-based machine learning services, and user interface development into a complete end-to-end pipeline.`,
 
 				sections: [
 					{
 						heading: 'Overview of Files and Technologies Used',
-						images: ['images/bart/bart-overview-1.jpg', 'images/bart/bart-overview-2.jpg'],
+						images: ['images/bart/OverviewOfFilesAndTech.png', 'images/bart/OverviewOfFilesAndTech2.png'],
 						paragraphs: [
 							"For my capstone project, I developed an automated track inspection system for BART that analyzes inspection videos to detect missing or damaged cover boards. The goal was to reduce manual inspection time and improve reliability by creating a complete end-to-end pipeline.",
 							"The system includes a PyQt-based user interface for uploading multiple video files, frame extraction using OpenCV, anomaly detection through AWS Rekognition, and automated PDF report generation with timestamps, location metadata, and confidence scores.",
@@ -329,7 +451,7 @@
 					},
 					{
 						heading: 'Analysis',
-						images: ['images/bart/bart-analysis-1.jpg', 'images/bart/bart-analysis-2.jpg'],
+						images: ['images/bart/Analysis.png', 'images/bart/Analysis2.png'],
 						paragraphs: [
 							"This project demonstrates the design of a full end-to-end automated inspection pipeline. One of the main challenges involved coordinating multiple components, including video processing, cloud-based inference, and report generation, while maintaining performance and reliability.",
 							"Handling large video files required efficient frame extraction and batching techniques to avoid excessive processing time. Additionally, ensuring that detection results were correctly aligned with timestamps and metadata required careful data structuring and validation. Another important aspect was designing a user-friendly interface.",
@@ -357,6 +479,65 @@
 					],
 					bad: [
 						'Heavy reliance on AWS Rekognition, which can become <strong>costly</strong> at scale.'
+					]
+				}
+			},
+
+			// YIG SPHERE ARRAY RESEARCH ****
+			'yig-array-research': {
+				title: 'YIG Sphere Array Spin Resonance Research',
+				meta: 'UC Merced Research | September 2024',
+				thumbClass: 'thumb-teal',
+				techStack: [
+					{
+						category: 'Programming Languages',
+						items: ['MATLAB']
+					}
+				],
+				desc: `As a Physics Research Assistant at UC Merced, I contributed to research investigating the magnetic behavior of Yttrium Iron Garnet (YIG) sphere arrays under controlled magnetic field conditions. The project explored spin resonance phenomena by analyzing how multiple YIG spheres interacted within externally applied magnetic fields.
+						
+				Using permanent magnets to precisely manipulate magnetic field strength, experiments were conducted to evaluate resonance frequency uniformity among the spheres and to investigate spin resonance coupling within the array. By collecting and analyzing experimental measurements, the research aimed to better understand the collective behavior of spin systems and characterize the resulting net spin resonance spectrum.`,
+
+				sections: [
+					{
+						heading: 'Overview of Files and Technologies Used',
+						paragraphs: [
+							"The research consisted primarily of experimental procedures, measurement records, and data analysis rather than traditional software components. Laboratory equipment was used to generate and manipulate controlled magnetic fields while YIG sphere arrays served as the experimental medium for observing spin resonance behavior. Experimental measurements were systematically recorded and organized into datasets for analysis, allowing resonance frequencies across multiple YIG spheres to be compared under varying magnetic field conditions.",
+							"Supporting documentation included laboratory notes, experimental observations, and data tables used to evaluate resonance uniformity and identify evidence of spin resonance coupling. The research relied on precise experimental methodology, careful measurement, and quantitative analysis to investigate the collective behavior of magnetic spin systems."
+						]
+					},
+					{
+						heading: 'Analysis',
+						images: ['images/yig/yig.png'],
+						paragraphs: [
+							"The objective of this research was to investigate how arrays of Yttrium Iron Garnet (YIG) spheres behave under controlled magnetic fields and to determine whether multiple spheres exhibit consistent resonance frequencies or demonstrate spin resonance coupling. By systematically varying magnetic field conditions and measuring resonance responses, the experiments sought to better understand the collective dynamics of interacting spin systems.",
+							"A key challenge involved maintaining precise experimental conditions while ensuring that measurements remained consistent across multiple trials. Small variations in magnetic field strength or sphere positioning could influence resonance behavior, making careful experimental control essential for producing reliable data. Collecting multiple observations allowed resonance frequencies to be compared across the array and helped identify patterns in the overall spin resonance spectrum.",
+							"Beyond the physics itself, the project emphasized scientific methodology and quantitative reasoning. Rather than focusing solely on obtaining expected results, the research required careful observation, documentation, and interpretation of experimental data. This experience reinforced the importance of reproducibility, precision, and systematic experimentation when investigating complex physical systems."
+						]
+					},
+					{
+						heading: 'Reflection',
+						paragraphs: [
+							"Working on the YIG Array research project introduced me to the discipline and attention to detail required in experimental scientific research. Unlike software development, where problems can often be debugged through code, laboratory research demanded careful control of physical variables, repeated experimentation, and precise measurement to produce meaningful results.",
+							"One of the most valuable aspects of the project was learning how to collect and analyze quantitative data while collaborating within a research environment. The experience strengthened my ability to approach problems methodically, evaluate experimental outcomes objectively, and recognize the importance of reproducibility in scientific investigations.",
+							"Although my career interests later shifted toward Human-Computer Interaction, artificial intelligence, and cognitive science, this research experience laid a strong foundation in analytical thinking and experimental methodology. The skills I developed—including data analysis, hypothesis-driven experimentation, and scientific collaboration—continue to influence how I approach research and problem solving across interdisciplinary domains."
+						]
+					}
+				],
+
+				table: {
+					goodHeader: 'The Good',
+					badHeader: 'The Bad',
+					good: [
+						'Provided hands-on experience conducting experimental scientific research.',
+						'Developed practical understanding of magnetic resonance and spin system behavior.',
+						'Strengthened quantitative data collection and analytical reasoning skills.',
+						'Reinforced the importance of reproducibility and controlled experimentation.',
+						'Fostered collaboration within an academic research laboratory.',
+						'Demonstrated the application of theoretical physics concepts through real-world experimentation.'
+					],
+					bad: [
+						'.'
 					]
 				}
 			}
@@ -397,6 +578,17 @@
 					<div class="modal-section">
 						<h3 class="modal-section-heading">${section.heading}</h3>
 						${section.paragraphs.map(p => `<p class="modal-section-text">${p}</p>`).join('')}
+						${section.list ? `
+							<ul class="section-list">
+								${section.list.map(item => `
+									<li>${item.label}:
+										<ul class="section-sublist">
+											<li>${item.text}</li>
+										</ul>
+									</li>
+								`).join('')}
+							</ul>
+						` : ''}
 						${section.images ? `
 							<div class="section-image-gallery">
 								${section.images.map(src => `<img src="${src}" alt="${section.heading}">`).join('')}
