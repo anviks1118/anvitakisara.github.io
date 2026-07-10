@@ -27,6 +27,9 @@
 			<a href="#about">
 				<p>About</p>
 			</a>
+			<a href="#certifications">
+				<p>Certifications</p>
+			</a>
 			<a href="#connect">
 				<p>Let's connect!</p>
 			</a>
@@ -118,11 +121,13 @@
 		<div id="about" class="about-container">
 			<h3>ABOUT</h3>
 			<h2>Bridging technical complexity and human-centered clarity</h2>
-			<p>Hi, I’m Anvita Kisara! I’m a UX/UI Engineer/ Designer dedicated to bridging the gap between human behavior and digital design. I love the process of design to development, whether it's sketching wireframes or thinking through the logic behind a system, I relish every step of the creative process. My journey into UX has been marked by a commitment to understanding not just how something works, but why it should work that way for the people using it.
+			<p>Hi, I’m Anvita Kisara! I’m a Computer Science and Engineer and UX/UI Engineer/ Designer dedicated to bridging the gap between human behavior and digital design. I love the process of design to development, whether it's sketching wireframes or thinking through the logic behind a system, I relish every step of the creative process. My journey into UX has been marked by a commitment to understanding not just how something works, but why it should work that way for the people using it.
 				
-				I majored in Computer Science and Engineering during my undergrad, where I learned to think systematically about problems. Through my projects, I gained hands-on experience translating technical constraints into real-world solutions, building a solid foundation in engineering and problem-solving. Building on that foundation, I've been developing my skills in user-centered design: conducting user research, building journey maps and personas, and creating prototypes that meet end-users' specific needs. My technical background gave me a strong sense of functionality; this shift has pushed me to lead with empathy and center the human experience in every design decision.		
+				With my Computer Science and Engineering major, I learned to think systematically about problems. Through my projects, I gained hands-on experience translating technical constraints into real-world solutions, building a solid foundation in engineering and problem-solving. 
 				
-				With this combined foundation in engineering and design, I'm excited to bring that same care to work that genuinely improves people's lives by creating experiences that make wellness and health information more accessible, intuitive, and human-centered.</p>
+				Building on that foundation, I've been developing my skills in user-centered design: conducting user research, building journey maps and personas, and creating prototypes that meet end-users' specific needs. My technical background gave me a strong sense of functionality; this shift has pushed me to lead with empathy and center the human experience in every design decision.		
+				
+				I'm excited to bring that same care to work that genuinely improves people's lives by creating experiences that make wellness and health information more accessible, intuitive, and human-centered.</p>
 		</div>
 
 		<div id="skills" class="skills-container">
@@ -135,12 +140,57 @@
 				<li>Data Analysis &amp; Interpretation</li>
 				<li>Human-Centered Design</li>
 				<li>GUI Development</li>
+				<li>Wireframing &amp; Prototyping</li>
 				<li>Python</li>
 				<li>JavaScript</li>
 				<li>AWS Cloud Services (Rekognition &amp; Sagemaker)</li>
 				<li>Git</li>
 				<li>GitHub</li>
 			</ul>
+		</div>
+	</div>
+
+	<hr>
+
+	<!-- Certifications Section -->
+	<div id="certifications" class="certifications-container">
+		<h3>CERTIFICATIONS</h3>
+		<div class="certifications-grid">
+			<div class="cert-card" onclick="openCertModal('quantum-enigmas')">
+				<img class="cert-thumb" src="images/certifications/quantum-enigmas-part1.png" alt="Quantum Enigmas: Part 1 certificate">
+				<div class="cert-info">
+					<p class="cert-name">Quantum Enigmas: Part 1</p>
+					<p class="cert-issuer">IBM SkillsBuild</p>
+				</div>
+			</div>
+			<div class="cert-card" onclick="openCertModal('ai-fundamentals')">
+				<img class="cert-thumb" src="images/certifications/ai-fundamentals.png" alt="Artificial Intelligence Fundamentals certificate">
+				<div class="cert-info">
+					<p class="cert-name">Artificial Intelligence Fundamentals</p>
+					<p class="cert-issuer">IBM SkillsBuild</p>
+				</div>
+			</div>
+			<div class="cert-card" onclick="openCertModal('cloud-computing')">
+				<img class="cert-thumb" src="images/certifications/cloud-computing-fundamentals.png" alt="Cloud Computing Fundamentals certificate">
+				<div class="cert-info">
+					<p class="cert-name">Cloud Computing Fundamentals</p>
+					<p class="cert-issuer">IBM SkillsBuild</p>
+				</div>
+			</div>
+			<div class="cert-card" onclick="openCertModal('web-dev')">
+				<img class="cert-thumb" src="images/certifications/web-dev-fundamentals.png" alt="Web Development Fundamentals certificate">
+				<div class="cert-info">
+					<p class="cert-name">Web Development Fundamentals</p>
+					<p class="cert-issuer">IBM SkillsBuild</p>
+				</div>
+			</div>
+			<div class="cert-card" onclick="openCertModal('discover-ai')">
+				<img class="cert-thumb" src="images/certifications/ai4all-discover-ai.png" alt="AI4ALL Discover AI certificate">
+				<div class="cert-info">
+					<p class="cert-name">Discover AI</p>
+					<p class="cert-issuer">AI4ALL &amp; UC Merced</p>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -194,7 +244,94 @@
 		</div>
 	</div>
 
+	<!-- Certification Detail Modal -->
+	<div id="cert-modal-overlay" class="modal-overlay" onclick="closeCertModal(event)">
+		<div class="cert-modal-box">
+			<button class="modal-close" onclick="closeCertModal(event)" aria-label="Close">
+				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+			</button>
+			<img id="cert-modal-image" class="cert-modal-image" src="" alt="">
+			<div class="cert-modal-content">
+				<p class="cert-modal-issuer" id="cert-modal-issuer"></p>
+				<h2 class="cert-modal-title" id="cert-modal-title"></h2>
+				<a id="cert-modal-verify" class="cert-modal-verify" href="#" target="_blank" rel="noopener">
+					Verify credential
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+				</a>
+			</div>
+		</div>
+	</div>
+
 	<script>
+		const certData = {
+			'quantum-enigmas': {
+				title: 'Quantum Enigmas: Part 1',
+				issuer: 'IBM SkillsBuild',
+				image: 'images/certifications/quantum-enigmas-part1.png',
+				verify: null
+			},
+			'ai-fundamentals': {
+				title: 'Artificial Intelligence Fundamentals',
+				issuer: 'IBM SkillsBuild',
+				image: 'images/certifications/ai-fundamentals.png',
+				verify: 'https://www.credly.com/go/VyZe8IWN'
+			},
+			'cloud-computing': {
+				title: 'Cloud Computing Fundamentals',
+				issuer: 'IBM SkillsBuild',
+				image: 'images/certifications/cloud-computing-fundamentals.png',
+				verify: 'https://www.credly.com/badges/f65dad63-2e13-4c41-8db4-2a2c9e874346'
+			},
+			'web-dev': {
+				title: 'Web Development Fundamentals',
+				issuer: 'IBM SkillsBuild',
+				image: 'images/certifications/web-dev-fundamentals.png',
+				verify: 'https://www.credly.com/go/58CiHZe0'
+			},
+			'discover-ai': {
+				title: 'Discover AI',
+				issuer: 'AI4ALL & UC Merced',
+				image: 'images/certifications/ai4all-discover-ai.png',
+				verify: null
+			}
+		};
+
+		function openCertModal(certId) {
+			const data = certData[certId];
+			if (!data) return;
+
+			document.getElementById('cert-modal-image').src = data.image;
+			document.getElementById('cert-modal-image').alt = data.title + ' certificate';
+			document.getElementById('cert-modal-issuer').textContent = data.issuer;
+			document.getElementById('cert-modal-title').textContent = data.title;
+
+			const verifyLink = document.getElementById('cert-modal-verify');
+			if (data.verify) {
+				verifyLink.href = data.verify;
+				verifyLink.style.display = 'inline-flex';
+			} else {
+				verifyLink.style.display = 'none';
+			}
+
+			const overlay = document.getElementById('cert-modal-overlay');
+			overlay.classList.add('active');
+			document.body.classList.add('modal-open');
+		}
+
+		function closeCertModal(event) {
+			if (event.target.closest('.modal-close') || event.target.id === 'cert-modal-overlay') {
+				document.getElementById('cert-modal-overlay').classList.remove('active');
+				document.body.classList.remove('modal-open');
+			}
+		}
+
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') {
+				document.getElementById('cert-modal-overlay').classList.remove('active');
+				document.body.classList.remove('modal-open');
+			}
+		});
+
 		const projectData = {
 
 			// PREDICTIVE TEXT APP ****
@@ -668,6 +805,20 @@
 			if (e.key === 'Escape') {
 				document.getElementById('project-modal-overlay').classList.remove('active');
 				document.body.classList.remove('modal-open');
+			}
+		});
+	</script>	<!-- Back to Top Button -->
+	<button id="back-to-top" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+	</button>
+
+	<script>
+		const backToTopButton = document.getElementById('back-to-top');
+		window.addEventListener('scroll', function () {
+			if (window.scrollY > 500) {
+				backToTopButton.classList.add('visible');
+			} else {
+				backToTopButton.classList.remove('visible');
 			}
 		});
 	</script>
