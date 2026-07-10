@@ -175,7 +175,7 @@ h3 {
 }
 
 .project-image-placeholder.thumb-green {
-    background-color: #cfe8d9;
+    background-color: #bce7ca;
 }
 
 .project-image-placeholder.thumb-purple {
@@ -187,7 +187,7 @@ h3 {
 }
 
 .project-image-placeholder.thumb-teal {
-    background-color: #c9ece5;
+    background-color: #add3d6;
 }
 
 .project-info {
@@ -665,8 +665,8 @@ body.modal-open {
 }
 
 .good-bad-table th.bad-header {
-    background-color: #fbe9e9;
-    color: #b3372c;
+    background-color: #f7f4cf;
+    color: #878340;
 }
 
 .good-bad-table td {
@@ -687,15 +687,24 @@ body.modal-open {
 }
 
 .good-bad-list li {
+    position: relative;
     margin-bottom: 14px;
+    padding-left: 20px;
+}
+
+.good-bad-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #000000;
 }
 
 .good-bad-list li:last-child {
     margin-bottom: 0;
-}
-
-.good-bad-list strong {
-    color: #113854;
 }
 
 .modal-back-button {
