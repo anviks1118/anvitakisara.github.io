@@ -63,6 +63,16 @@
 		<h3>PROJECTS</h3>
 		<div class="projects-grid">
 			<!-- Project -->
+			<div class="project-card" onclick="openProjectModal('healthiq-app')">
+				<div class="project-image-placeholder thumb-rose"></div>
+				<div class="project-info">
+					<p class="project-title">HealthIQ App</p>
+					<p class="project-meta">UC Merced HCI Project | May 2026</p>
+					<p class="project-desc">A fitness app built, featuring a user profile that turns ML-driven step goals into something users can actually trust. Personalized, transparent, and earned rather than arbitrary.</p>
+				</div>
+			</div>
+
+			<!-- Project -->
 			<div class="project-card" onclick="openProjectModal('predictive-text')">
 				<div class="project-image-placeholder thumb-blue"></div>
 				<div class="project-info">
@@ -330,6 +340,109 @@
 		});
 
 		const projectData = {
+
+			// HEALTHIQ APP ****
+			'healthiq-app': {
+				title: 'HealthIQ App',
+				meta: 'UC Merced Project | May 2026',
+				thumbClass: 'thumb-rose',
+				techStack: [
+					{
+						category: 'Programming Languages',
+						items: ['TypeScript', 'Python']
+					},
+					{
+						category: 'Frameworks & Libraries',
+						items: ['Expo', 'React Native', 'Axios', 'FastAPI', 'XGBoost', 'SQLAlchemy', 'Scikit-learn', 'bcrypt']
+					},
+					{
+						category: 'Other Tools',
+						items: ['Pytest', 'Git', 'GitHub']
+					}
+				],
+				desc: `HealthIQ is a fitness mobile app I designed and built with a five-person team for my Human-Computer Interaction course, centered on a question we kept coming back to throughout the design process: how do you turn a raw number, steps taken, into something a user actually feels motivated by? The app features a user profile that captures user demographics and reflects back ML-driven step recommendations tailored to each person's specific fitness goals.
+				
+				Our design process started with a problem, not a feature list. We observed that most fitness apps leave users feeling abandoned, tracking steps with no context for what the number means, or gated behind a paywall that discourages consistency. From there, we worked through goals and motivation, low-fidelity design, and iterative usability decisions before writing a line of implementation code, treating the interface itself as the primary design artifact.
+				
+				I owned the user profile experience and cross-team usability testing, focusing on how the app captures a user's data and reflects it back to them in a way that feels motivating and trustworthy rather than clinical.`,
+
+				sections: [
+					{
+						heading: 'Overview of Files and Technologies Used',
+						paragraphs: [
+							"HealthIQ was built with TypeScript and Expo/React Native on the frontend, communicating through Axios with a Python FastAPI backend that served ML-driven step recommendations generated with XGBoost. SQLAlchemy handled data persistence for user profiles and activity history, bcrypt secured credentials during sign-up and login, and Pytest covered backend testing. Git and GitHub supported version control across our five-person team.",
+
+							"The frontend was organized by screen, with the profile, onboarding, home, and feed experiences built as separate components that shared a consistent data contract with the backend. That separation let each of us work on our assigned screen independently while keeping the ML-driven recommendation logic and the interface that displayed it cleanly decoupled, which mattered given how many people were touching different parts of the app within the same semester."
+						]
+					},
+					{
+						heading: 'Goals & Motivation',
+						paragraphs: [
+							"Before any design or code work began, our team grounded the project in a user problem rather than a feature idea. We asked: what makes people abandon fitness apps? Two patterns stood out. First, most apps track steps without giving users any sense of what the number means or why it matters to them personally, so the data feels disconnected from any real motivation. Second, many apps create a digital divide by gating meaningful features behind a paid plan, which discourages the very users who most need an easy on-ramp to an active lifestyle.",
+
+							"That framing shaped our core design goals: keep the user's purpose for exercising visible throughout the experience, transform raw activity metrics into a legible sense of progress, and celebrate small wins as a path toward bigger ones. We wanted a user opening the app to feel supported and understood, not judged by a number."
+						]
+					},
+					{
+						heading: 'Design Process',
+						paragraphs: [
+							"Our design discussions worked through three lenses before implementation: hardware, software, and UI. On the hardware side, we asked what devices a typical user would realistically test the app on, which shaped our decision to build for both iOS and Android from the start rather than treating one platform as an afterthought.",
+
+							"On the UI side, our central question was how to format the interface so it felt intuitive to first-time users without feeling crowded or, at the other extreme, sparse and empty. We iterated on the user profile and onboarding screens specifically to keep cognitive load low: clear typography, a simple sign-up-versus-login entry point, and a visual hierarchy that put the user's personalized goal front and center rather than burying it under settings or navigation.",
+
+							"I focused on the user profile experience, since that screen is where a user's demographic and activity data gets translated into something personal. My design priority there was transparency: making sure the interface showed users not just their recommended step goal, but enough context that the number felt earned and specific to them, rather than an arbitrary system output they had no reason to trust."
+						]
+					},
+					{
+						heading: 'Analysis',
+						paragraphs: [
+							"The core design challenge in HealthIQ was translating a machine-learning output into something a user could actually trust at a glance. XGBoost generated a recommended step goal from each user's demographic and activity data, but a number alone doesn't build confidence, so the profile screen had to carry enough surrounding context (how the goal was calculated, what it was based on) for that recommendation to feel earned rather than arbitrary.",
+
+							"That tension between technical accuracy and legibility showed up throughout the interface, not just the profile screen. The onboarding flow had to collect enough demographic data for the model to produce a meaningful recommendation without feeling like an interrogation, which meant deciding what to ask up front versus what could be inferred or added later. We also had to design around asynchronous state: a user's first recommendation isn't available until after onboarding completes and the backend responds, so the interface needed clear loading and transition states rather than leaving the user staring at an empty screen.",
+
+							"Coordinating this across a five-person team also meant the UI layer had to be resilient to backend changes made mid-semester. Keeping the frontend and the FastAPI contract decoupled let the recommendation model evolve without forcing a redesign of the profile screen each time, which turned out to be one of the more practical lessons of the project: good interface architecture has to anticipate that the system behind it won't stay static."
+						]
+					},
+					{
+						heading: 'Usability Testing & Findings',
+						paragraphs: [
+							"We validated the design through a mix of unit and integration testing for correctness, paired with live usability testing on physical iOS and Android devices through Expo, since a fitness app's real usability only shows up once it's actually worn and used, not just simulated.",
+
+							"That testing surfaced two meaningful UX findings. First, some screens, particularly the workout-viewing flow, created friction and made certain features harder to locate than we'd intended in our design mockups, a gap between our design intent and the executed interface that we didn't fully close within the semester. Second, we found a platform-specific usability gap: iOS users moved through the app without issue, while Android users ran into problems our iOS-centric early testing hadn't caught, underscoring how much cross-platform testing matters even when the interface design is shared.",
+
+							"We also recognized a scope limitation in our final evaluation: the app currently only generates step recommendations, when a more complete and genuinely user-centered health experience would need to account for a broader range of fitness goals and activity types, not just walking."
+						]
+					},
+					{
+						heading: 'Reflection',
+						paragraphs: [
+							"HealthIQ was my first time designing a profile experience meant to make a machine-learning output feel personal rather than abstract. It reinforced a principle I've carried into my other HCI and UX work since: a technically accurate recommendation is only as good as whether the person receiving it understands and trusts where it came from. Good UX for an ML-driven feature isn't just about the interface around it, it's about designing the disclosure of how and why a recommendation was made.",
+
+							"Coordinating a five-person team across design, frontend, backend, and testing also taught me how HCI principles have to survive contact with implementation constraints. I was often the one checking whether what the backend generated actually displayed and made sense on the user-facing side, which meant advocating for the user's perspective at points where it would have been easier to ship whatever the system technically produced.",
+
+							"If I extended this project, the biggest opportunity is closing the gap between our intended interaction design and what usability testing revealed: fixing the Android-specific friction points, letting users choose their own goal type instead of defaulting everyone toward a walking target, and revisiting the UI so it holds up across different screen sizes, something that only became visible once we tested outside our own devices."
+						]
+					}
+				],
+
+				table: {
+					goodHeader: 'Benefits',
+					badHeader: 'What Can Be Improved',
+					good: [
+						'Grounded the design in a clearly articulated user problem (motivation and abandonment) before any implementation began, keeping the team focused on user needs over feature-building.',
+						'Translates raw step data into a personalized, legible goal, directly addressing the cognitive-overload problem we identified in existing fitness apps.',
+						'User profile design keeps the reasoning behind each recommendation visible, supporting user trust rather than presenting an unexplained system output.',
+						'Cross-platform usability testing on physical iOS and Android devices surfaced real interaction differences that testing in a simulator alone would have missed.',
+						'Clear ownership across the profile, sign-up, home, feed, and backend experiences supported a cohesive end-to-end product within a single semester.'
+					],
+					bad: [
+						'Close the gap between intended interaction design and shipped experience: resolve the Android-specific usability issues and re-validate the workout-viewing flow that created friction for users.',
+						'Conduct structured usability testing with users outside the team (think-aloud sessions, task completion rates) rather than relying primarily on internal team testing.',
+						'Expand beyond step recommendations into fuller workout guidance, and let users choose their own goal type (weight loss, staying active, etc.) instead of a single default target.',
+						'Update the UI to scale properly across different screen sizes, validated through testing on a wider range of devices.'
+					]
+				}
+			},
 
 			// PREDICTIVE TEXT APP ****
 			'predictive-text': {
@@ -786,6 +899,17 @@
 						` : ''}
 					</div>
 				`).join('');
+			}
+
+			if (data.video) {
+				extraHTML += `
+					<div class="modal-section">
+						<h3 class="modal-section-heading">Demo Video</h3>
+						<div class="video-embed-wrapper">
+							<iframe src="${data.video}" allow="autoplay" allowfullscreen loading="lazy"></iframe>
+						</div>
+					</div>
+				`;
 			}
 
 			if (data.table) {
