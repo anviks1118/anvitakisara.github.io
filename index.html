@@ -436,22 +436,25 @@
 				],
 				desc: `This project explored how Echo State Networks (ESNs), a specialized type of recurrent neural network, can capture temporal dependencies in time-series data while maintaining computational efficiency. Using the Japanese Vowels benchmark dataset, I implemented, configured, and evaluated ESN models to better understand how dynamic neural systems process sequential information.
 						
-				It explored computational modeling and data analysis techniques to investigate temporal pattern recognition, applying reservoir computing concepts to analyze and classify sequential data within a cognitive science research context.`,
+				It explored computational modeling and data analysis techniques to investigate temporal pattern recognition, applying reservoir computing concepts to analyze and classify sequential data within a cognitive science research context. This work, while distinct from interface design, deepened my thinking about how systems can make sense of information that unfolds over time.`,
 
 				sections: [
 					{
 						heading: 'Overview of Files and Technologies Used',
 						paragraphs: [
 							"The project consisted of modular Python scripts responsible for data preprocessing, model configuration, training, evaluation, and visualization. Sequential speech data from the Japanese Vowels dataset was cleaned and formatted before being processed through Echo State Network architectures built using ReservoirPy. Separate modules handled reservoir initialization, hyperparameter configuration, model training, prediction, and performance evaluation, while visualization scripts generated plots to analyze classification accuracy and reservoir behavior.",
-							"NumPy enabled efficient numerical computations, Matplotlib produced graphical representations of experimental results, and Scikit-learn assisted with preprocessing and evaluation metrics. Git and GitHub supported version control throughout development, and Jupyter Notebook provided an interactive environment for experimentation and iterative testing. The modular structure allowed experiments to be easily modified, making it possible to test different reservoir configurations and compare model performance across multiple experimental conditions."
+
+							"NumPy enabled efficient numerical computations, Matplotlib produced graphical representations of experimental results, and Scikit-learn assisted with preprocessing and evaluation metrics. Git and GitHub supported version control throughout development, and Jupyter Notebook provided an interactive environment for experimentation and iterative testing. The modular structure allowed experiments to be easily modified, making it possible to test different reservoir configurations and compare model performance across multiple experimental conditions, a process of iterating based on results that I've since carried into how I approach design work."
 						]
 					},
 					{
 						heading: 'Analysis',
 						paragraphs: [
 							"The primary objective of this project was to investigate how ESNs could effectively model temporal dependencies in sequential data while maintaining computational efficiency. Unlike traditional recurrent neural networks, ESNs require training only the readout layer, allowing the fixed reservoir to encode complex temporal patterns without the high computational costs associated with backpropagation through time. This made reservoir computing particularly well suited for sequence classification tasks such as the Japanese Vowels dataset.",
+
 							"Throughout the project, experimentation focused on understanding how reservoir parameters, including spectral radius, reservoir size, and connectivity-influenced model performance. Small adjustments to these hyperparameters often produced significant changes in classification accuracy, demonstrating the sensitivity of reservoir dynamics and the importance of careful experimental tuning.",
-							"From a cognitive science perspective, the project highlighted how computational models can simulate aspects of temporal information processing observed in biological neural systems. Rather than simply maximizing prediction accuracy, the research emphasized understanding how recurrent neural dynamics encode sequential information and how these representations contribute to successful classification."
+
+							"From a cognitive science perspective, the project highlighted how computational models can simulate aspects of temporal information processing observed in biological neural systems. Rather than simply maximizing prediction accuracy, the research emphasized understanding how recurrent neural dynamics encode sequential information and how these representations contribute to successful classification. It's a different kind of research from my more interface-focused work, but it shaped how I think about systems that respond to patterns over time."
 						]
 					},
 					{
@@ -461,7 +464,7 @@
 							
 							"One of the most valuable lessons I learned from this research was that successful computational modeling requires more than implementation, it requires thoughtful experimentation and analysis. Adjusting reservoir parameters required careful observation, repeated testing, and interpretation of system behavior rather than relying on default configurations. This iterative process strengthened my analytical thinking and improved my ability to evaluate experimental results.",
 							
-							"This project deepened my appreciation for interdisciplinary research by demonstrating how computational models can contribute to the study of cognitive processes. Exploring how recurrent neural systems process temporal information provided insight into both artificial systems and theories of human cognition, reinforcing my interest in applying computational approaches to research problems involving intelligent systems and human-centered technology."
+							"This project deepened my appreciation for interdisciplinary research by demonstrating how computational models can contribute to the study of cognitive processes. Exploring how recurrent neural systems process temporal information provided insight into both artificial systems and theories of human cognition, reinforcing my interest in applying computational approaches to research problems involving intelligent systems and human-centered technology. It shaped how I think about designing systems that respond intelligently to patterns in behavior over time."
 						]
 					}
 				],
@@ -470,16 +473,22 @@
 					goodHeader: 'Benefits',
 					badHeader: 'What Can Be Improved',
 					good: [
-						'Explored an efficient recurrent computational architecture for modeling and analyzing sequential information.',
-						'Gained hands-on experience implementing reservoir computing approaches and studying dynamic system behavior.',
-						'Strengthened understanding of temporal pattern processing and computational models of cognition.',
+						'Explored an efficient recurrent computational architecture for modeling and analyzing sequential information',
+
+						'Gained hands-on experience implementing reservoir computing approaches and studying dynamic system behavior',
+
+						'Strengthened understanding of temporal pattern processing and computational models of cognition, a perspective that carries over to how interactive systems track patterns in behavior over time.',
+
 						'Developed stronger research practices through systematic experimentation, parameter exploration, and analysis of results.',
+
 						'Connected computational modeling techniques with cognitive science research to investigate information processing and intelligent systems.'
 					],
 					bad: [
 						'Add interactive visualizations to illustrate reservoir states, activation patterns, and how information evolves through the network over time.',
+
 						'Explore comparisons between ESNs and other sequence modeling approaches to better analyze their strengths in capturing temporal patterns.',
-						'Improve interpretability by analyzing how different input signals affect reservoir behavior and prediction outcomes.'
+
+						'Improve interpretability by analyzing how different input signals affect reservoir behavior and prediction outcomes, interpretability that could help translate these findings for a broader, less technical audience.'
 					]
 				}
 			},
@@ -503,36 +512,43 @@
 						items: ['Git', 'JSON']
 					}
 				],
-				desc: `Human conversations are driven by associative thinking, where one idea naturally leads to another through semantic and cognitive relationships. Understanding these patterns is essential for developing conversational AI systems that communicate in ways that feel coherent, intuitive, and aligned with human reasoning.
+				desc: `Human conversations are fundamentally driven by associative thinking, where ideas transition seamlessly through complex semantic and cognitive relationships. Within the field of Human-Computer Interaction (HCI), decoding these natural patterns is essential for designing conversational interfaces that feel intuitive, behave predictably, and align with a user's organic mental model of communication.
 						
-				This research project explored how large language models (LLMs) emulate human associative behavior through dyadic word association. I contributed to the development of an automated system that orchestrated multi-turn interactions between two AI agents, ensuring stable turn-taking and consistent conversational flow under controlled experimental conditions. The system leveraged LLM APIs to simulate human association patterns while maintaining reproducible dialogue sequences for behavioral analysis.
-				
-				Alongside implementation, I transcribed and structured human dyadic association sessions to produce clean datasets for computational modeling and comparison. By combining cognitive science, natural language processing (NLP), and software engineering, this research contributes to a deeper understanding of the similarities and differences between human and AI language behavior. The project demonstrates how carefully designed conversational systems can support the study of semantic reasoning and inform the development of more natural and human-centered AI interactions.`,
+				This research project investigated how Large Language Models (LLMs) emulate these cognitive pathways through simulated dyadic association. I engineered the conversational coordination mechanisms for an automated framework that orchestrated multi-turn interactions between autonomous AI agents, optimizing for stable turn-taking, fluid dialogic pacing, and predictable feedback loops. By establishing rigorous architectural control over the agent interaction sequences, the system allowed researchers to systematically isolate and analyze behavioral touchpoints and dialogue flow under tightly controlled experimental conditions.	
+							
+				Alongside the system development, I mapped, transcribed, and structured empirical human conversational sessions into high-fidelity behavioral datasets to compare human collaboration patterns directly against machine outputs. By bridging cognitive science, natural language processing (NLP), and interaction design, this work contributes to a deeper understanding of how humans perceive and collaborate with language-based agents. Ultimately, the project demonstrates how deliberate conversational UX engineering can uncover the boundaries of machine reasoning and inform the development of more transparent, reliable, and human-centered AI systems.`,
 			
 			sections: [
 					{
 						heading: 'Overview of Files and Technologies Used',
 						paragraphs: [
-							"The Dyadic Association project was developed using Python as the primary programming language to automate cognitive science experiments investigating associative reasoning between LLMs. The application consisted of modular components responsible for conversation orchestration, API communication, transcript processing, and structured data collection. A central conversation manager maintained coherent multi-turn interactions by coordinating alternating turn-taking between AI agents while preserving conversational context throughout each experiment.", 
+							"The Dyadic Association project was developed using Python to automate a cognitive science experiment studying how closely AI-generated language mirrors human associative reasoning. This is a question directly relevant to how conversational systems should be designed to feel natural to the people using them.", 
 							
-							"LLM APIs were integrated to generate human-like associative responses, with JSON used to structure prompts, responses, and experimental metadata. Supporting scripts automated transcript processing and organized conversation logs into research-ready datasets for linguistic and semantic analysis. Version control was managed using Git, enabling collaborative development with my faculty mentor and Ph.D. researcher. The modular architecture allowed the system to be easily expanded for future experiments while ensuring reliable, reproducible conversational workflows for Human-Computer Interaction (HCI) and cognitive science research."
+							"At the center of the system was a conversation manager responsible for governing multi-turn interactions between two AI agents: enforcing correct speaker alternation and preserving context across the exchange. This wasn't just a backend requirement. Context continuity and turn-taking are the same fundamentals that determine whether any conversational system, human-facing or not, feels coherent versus disjointed. Getting this right was essential to producing dialogue that could be meaningfully compared against real human association patterns.",
+
+							"LLM APIs were integrated to generate the AI side of each exchange, with JSON used to structure prompts, responses, and interaction metadata so that conversational behavior could be consistently logged and analyzed. Supporting scripts converted raw conversation logs into clean, structured datasets, making it possible to compare how AI association patterns diverge from human ones. For instance, where AI responses stay tightly semantic while human associations wander more loosely. Git supported collaborative development with my faculty mentor and Ph.D. researcher throughout. Together, this architecture provided a reliable, reproducible way to study a question at the core of conversational design: what does it actually mean for an interaction to feel human?"
 						]
 					},
 					{
 						heading: 'Analysis',
 						paragraphs: [
-							"The objective of the Dyadic Association Project was to automate a traditionally manual cognitive science experiment by developing a system capable of facilitating structured conversations between two LLMs. The project focused on reproducing human free-association experiments in a controlled computational environment, allowing researchers to compare human linguistic behavior with AI-generated associative reasoning.",
-						"One of the primary technical challenges involved maintaining coherent conversational flow across multiple interaction rounds. Unlike a simple chatbot that responds independently to each prompt, the system needed to preserve conversational context, alternate speakers correctly, and ensure that each response reflected the evolving dialogue. This required implementing conversation orchestration logic that managed turn-taking, prompt sequencing, and API communication while preventing interruptions or inconsistent dialogue states.",
-						"From an HCI perspective, the project emphasized designing reliable interaction systems rather than user-facing interfaces. The quality of the collected research data depended on the stability and consistency of the conversational framework. Small implementation details, such as preserving context between turns, handling API failures gracefully, and maintaining reproducible experimental conditions, directly affected the validity of the resulting datasets.",
-						"This project also highlighted the intersection of AI and cognitive science. By automating conversational experiments, researchers could generate significantly larger datasets than would be practical through manual human studies alone. This scalability enables broader investigations into semantic association, language production, and similarities between human and AI communication while reducing the time required to conduct experiments."
+							"The objective of the Dyadic Association Project was to automate a traditionally manual cognitive science experiment by developing a system capable of facilitating structured conversations between two LLMs. The project focused on reproducing human free-association experiments in a controlled computational environment, allowing researchers to compare human linguistic behavior with AI-generated associative reasoning. This comparison speaks directly to how naturally an AI system can be designed to communicate.",
+
+						"One of the primary technical challenges involved maintaining coherent conversational flow across multiple interaction rounds. Unlike a simple chatbot that responds independently to each prompt, the system needed to preserve conversational context, alternate speakers correctly, and ensure that each response reflected the evolving dialogue. These are the same fundamentals that determine whether any conversational interface, human-facing or not, feels coherent rather than disjointed: this required implementing conversation orchestration logic that managed turn-taking, prompt sequencing, and API communication while preventing interruptions or inconsistent dialogue states.",
+
+						"This project centered on designing a reliable interaction system — one where the underlying problem was the same one conversational UX design has to solve: how do you structure an exchange so it feels continuous and trustworthy rather than mechanical? The quality of the collected research data depended on the stability and consistency of the conversational framework, and small implementation details, such as preserving context between turns and handling API failures gracefully, directly affected whether the resulting dialogue reflected natural, coherent communication.",
+
+						"This project also highlighted the intersection of AI and cognitive science. By automating conversational experiments, researchers could generate significantly larger datasets than would be practical through manual human studies alone, enabling broader investigation into where AI-generated language tracks human association patterns and where it diverges. These findings carry direct implications for designing conversational systems that communicate the way people actually think."
 						]
 					},
 					{
 						heading: 'Reflection',
 						paragraphs: [
-							"Working on the Dyadic Association Project gave me valuable experience collaborating within an interdisciplinary research environment where software engineering directly supported cognitive science research. Rather than building software for consumer applications, I developed tools that enabled researchers to conduct experiments more efficiently and consistently. One of the most rewarding aspects of the project was learning how technical implementation influences research quality. Building reliable conversation orchestration required thinking beyond writing functional code; I had to ensure that each interaction followed consistent experimental procedures while preserving the natural flow of conversation. This experience strengthened my appreciation for designing systems that prioritize reliability, reproducibility, and data integrity.",
+							"Working on the Dyadic Association Project gave me valuable experience collaborating within an interdisciplinary research environment where software engineering directly supported cognitive science research. Rather than building software for consumer applications, I developed tools that enabled researchers to study how AI-generated conversation compares to human communication. One of the most rewarding aspects of the project was learning how technical implementation influences research quality — and, by extension, interaction quality.",
+
+							"Building reliable conversation orchestration required thinking beyond writing functional code; I had to ensure that each interaction preserved the natural flow of conversation, the same underlying goal that shapes any well-designed conversational interface. This experience strengthened my appreciation for designing systems that prioritize reliability, reproducibility, and natural interaction.",
 							
-							"The project also improved my ability to collaborate across disciplines. Throughout development, I worked closely with my faculty mentor and Ph.D. researcher, regularly discussing implementation decisions, reporting progress, and refining the system based on evolving research objectives. Translating research requirements into technical solutions taught me how to communicate effectively with stakeholders who approached problems from different academic perspectives. Perhaps the most significant takeaway was seeing how AI can be used as a research tool rather than simply an end product. Developing this platform reinforced my interest in Human-Computer Interaction by demonstrating how thoughtful system design can facilitate meaningful investigations into human cognition, language, and interaction. It strengthened my passion for building technologies that bridge software engineering, AI, and user-centered research."
+							"The project also improved my ability to collaborate across disciplines. Throughout development, I worked closely with my faculty mentor and Ph.D. researcher, regularly discussing implementation decisions, reporting progress, and refining the system based on evolving research objectives. Translating research requirements into technical solutions taught me how to communicate effectively with stakeholders who approached problems from different academic perspectives. Perhaps the most significant takeaway was seeing how AI can be used as a research tool for studying communication itself, not just as an end product. It reinforced my interest in Human-Computer Interaction by showing me that good interaction design starts with understanding how people actually communicate — the technical implementation is what makes that understanding usable."
 						]
 					}
 				],
@@ -541,17 +557,17 @@
 					goodHeader: 'Benefits',
 					badHeader: 'What Can Be Improved',
 					good: [
-						'Automated a traditionally manual cognitive science experiment, increasing research efficiency.',
-						'Produced structured, reproducible conversational datasets suitable for large-scale analysis.',
-						'Modular conversation orchestration allows future experimental expansion.',
-						'Simulated multi-turn dialogue while maintaining coherent conversational flow.',
-						'Reduced researcher workload by automating transcript generation and data collection.',
-						'Strengthened interdisciplinary collaboration between computer science and cognitive science research.'
+						'Automated a traditionally manual cognitive science experiment, increasing research efficiency for studying human-AI communication patterns.',
+						'Produced structured, reproducible conversational datasets suitable for analyzing how naturally AI-generated dialogue compares to human interaction.',
+						'Modular conversation orchestration allows future experimental expansion into new dimensions of conversational behavior.',
+						'Simulated multi-turn dialogue while maintaining coherent conversational flow — the same context-preservation and turn-taking challenges central to designing any natural-feeling conversational interface.',
+						'Reduced researcher workload by automating transcript generation and data collection, freeing more time for interaction analysis.',
+						'Strengthened interdisciplinary collaboration between computer science and cognitive science research, connecting technical implementation to questions of human communication and design.'
 					],
 					bad: [
-						'Expand the system by incorporating larger and more diverse human conversation datasets to better understand variations in associative thinking and conversational patterns.',
-						'Develop more advanced evaluation methods to compare AI-generated associations with human responses, including measures of semantic similarity, creativity, and contextual relevance.',
-						'Improve the conversational architecture by introducing adaptive dialogue strategies that allow AI agents to adjust their responses based on interaction history and user-specific patterns.'
+						'Expand the system by incorporating larger and more diverse human conversation datasets to better understand variations in associative thinking and conversational patterns relevant to interaction design.',
+						'Develop more advanced evaluation methods to compare AI-generated associations with human responses, including measures of semantic similarity, creativity, and contextual relevance — metrics that could directly inform conversational UX design.',
+						'Improve the conversational architecture by introducing adaptive dialogue strategies that allow AI agents to adjust their responses based on interaction history and user-specific patterns, moving toward more personalized, human-centered conversation design.'
 					]
 				}
 			},
@@ -584,21 +600,24 @@
 					}
 
 				],				
-				desc: `This project was developed as part of my capstone work to improve the efficiency and reliability of track inspections for Bay Area Rapid Transit (BART). Track inspections are traditionally performed manually, which can be time-consuming and prone to human error.
+				desc: `This project was developed as part of my capstone work to help BART maintenance teams and track inspectors catch damaged or missing cover boards faster and more reliably than manual visual review allows. Track inspections are traditionally performed manually, which can be time-consuming and prone to human error, and the people doing that work needed a tool that fit into their existing process rather than adding friction to it.
 					
-				The goal of this project was to design and implement an automated system capable of analyzing track inspection videos and identifying missing or damaged cover boards. The system processes uploaded inspection videos, extracts frames, applies a machine learning model to detect anomalies, and generates structured reports summarizing findings.
+				The goal of this project was to design and implement an automated system capable of analyzing track inspection videos and identifying missing or damaged cover boards. The system processes uploaded inspection videos, extracts frames, applies a machine learning model to detect anomalies, and generates structured reports summarizing findings. This is a PyQt-based interface that is built around how inspection teams would actually use it day to day, supporting multiple video uploads and clear status feedback throughout processing.
 				
-				By automating this workflow, the project aims to reduce manual effort, improve consistency, and provide actionable insights for maintenance teams. This project integrates computer vision, cloud-based machine learning services, and user interface development into a complete end-to-end pipeline.`,
+				By automating this workflow, the project aims to reduce manual effort, improve consistency, and provide maintenance teams with reports they can act on quickly. This project integrates computer vision, cloud-based machine learning services, and user interface development into a complete end-to-end pipeline, with the interface designed to make a technically complex detection process feel simple and trustworthy for the people relying on it.`,
 
 				sections: [
 					{
 						heading: 'Overview of Files and Technologies Used',
 						images: ['images/bart/OverviewOfFilesAndTech.png', 'images/bart/OverviewOfFilesAndTech2.png'],
 						paragraphs: [
-							"For my capstone project, I developed an automated track inspection system for BART that analyzes inspection videos to detect missing or damaged cover boards. The goal was to reduce manual inspection time and improve reliability by creating a complete end-to-end pipeline.",
+							"For my capstone project, I developed an automated track inspection system for BART designed to reduce manual inspection time and make the review process more consistent for the maintenance teams using it. The system analyzes inspection videos to detect missing or damaged cover boards through a complete end-to-end pipeline, from video upload to a finished report.",
+							
 							"The system includes a PyQt-based user interface for uploading multiple video files, frame extraction using OpenCV, anomaly detection through AWS Rekognition, and automated PDF report generation with timestamps, location metadata, and confidence scores.",
+
 							"Results are stored in a SQLite database and optionally sent to a FastAPI endpoint for integration. This project required coordinating video processing, cloud-based inference, report generation, and user interface design while maintaining performance and usability.",
-							"Through this experience, I strengthened my skills in system design, debugging complex pipelines, and building user-centered tools, and I gained insight into balancing technical accuracy with practical usability."
+
+							"Through this experience, I strengthened my skills in system design, debugging complex pipelines, and building user-centered tools, and I gained insight into balancing technical accuracy with practical usability. Specifically, how much of a system's complexity should be exposed to the user versus abstracted away."
 						]
 					},
 					{
@@ -606,17 +625,22 @@
 						images: ['images/bart/Analysis.png', 'images/bart/Analysis2.png'],
 						paragraphs: [
 							"This project demonstrates the design of a full end-to-end automated inspection pipeline. One of the main challenges involved coordinating multiple components, including video processing, cloud-based inference, and report generation, while maintaining performance and reliability.",
+
 							"Handling large video files required efficient frame extraction and batching techniques to avoid excessive processing time. Additionally, ensuring that detection results were correctly aligned with timestamps and metadata required careful data structuring and validation. Another important aspect was designing a user-friendly interface.",
-							"The PyQt application was developed to support multiple file uploads, individual and batch downloads, and real-time status updates. This improved usability and allowed users to process multiple inspections simultaneously.",
-							"The integration of AWS Rekognition introduced challenges related to API latency and error handling. To address this, the pipeline included retry mechanisms and logging to ensure reliability. Overall, this project emphasizes system design, scalability considerations, and real-world usability."
+
+							"Designing a user-friendly interface was just as central to this project as the detection pipeline itself. The PyQt application was developed to support multiple file uploads, individual and batch downloads, and real-time status updates, so users could process multiple inspections simultaneously and always know where a given video stood in the pipeline rather than waiting on an opaque process.",
+
+							"The integration of AWS Rekognition introduced challenges related to API latency and error handling. To address this, the pipeline included retry mechanisms and logging to ensure reliability, since a failure a user couldn't see or understand would erode trust in the tool. Overall, this project emphasizes system design, scalability considerations, and real-world usability."
 						]
 					},
 					{
 						heading: 'Reflection',
 						paragraphs: [
-							"This project strengthened my understanding of building complete systems that integrate machine learning, user interfaces, and cloud services. I gained experience designing modular pipelines, handling asynchronous processes, and ensuring reliability across multiple components. One of the most valuable lessons was learning how to balance technical performance with usability. While developing the detection pipeline was important, ensuring that the interface was intuitive and useful for end users was equally critical.",
-							"Additionally, working on this project improved my ability to debug complex systems, manage dependencies, and structure code for maintainability. I also gained experience in testing and validating results, which reinforced the importance of reliability in real-world applications. If I were to extend this project further, I would explore improving detection accuracy using a custom-trained model, implementing real-time processing capabilities, and deploying the system as a scalable cloud service.",
-							"This project reinforced my interest in designing intelligent systems that assist people and improve operational workflows, which aligns with my goals for graduate study."
+							"This project strengthened my understanding of building complete systems that integrate machine learning, user interfaces, and cloud services. I gained experience designing modular pipelines, handling asynchronous processes, and ensuring reliability across multiple components. One of the most valuable lessons was learning how to balance technical performance with usability, a highly accurate detection model is only useful if the people relying on it can actually understand and trust its output. Developing the detection pipeline was important, but ensuring that the interface was intuitive and useful for end users was equally critical, and often the harder design problem to solve.",
+
+							"Additionally, working on this project improved my ability to debug complex systems, manage dependencies, and structure code for maintainability. I also gained experience in testing and validating results, which reinforced the importance of reliability in real-world applications, especially when the people using a tool need to trust its output without verifying it themselves. If I were to extend this project further, I would explore improving detection accuracy using a custom-trained model, implementing real-time processing capabilities, and deploying the system as a scalable cloud service. I would want to validate any interface changes with actual inspection teams rather than relying on my own assumptions about their workflow.",
+
+							"This project reinforced my interest in designing intelligent systems that assist people and improve operational workflows, and it clarified for me that the technical and human sides of a system can't really be separated — a system's usefulness is ultimately measured by whether the people who need it can rely on it. This aligns closely with my goals for UX/UI design, where building something technically sound is only half the job."
 						]
 					}
 				],
@@ -625,14 +649,18 @@
 					goodHeader: 'Benefits',
 					badHeader: 'What Can Be Improved',
 					good: [
-						'Strong end-to-end pipeline: video upload → frame processing → detection (AWS Rekognition) → report generation → storage/download.',
-						'Clear real-world application (rail inspection), which makes the project feel meaningful and industry-relevant.',
-						'PyQt UI supports multi-file upload and per-file processing, which improves usability over a single-file system.'
+						'Well-structured user workflow: the linear pipeline (upload → processing → detection → report → download) mirrors a clear mental model, reducing cognitive load by walking users through discrete, predictable stages rather than one opaque black-box step.',
+
+						'Strong task-domain alignment: designing for rail inspectors grounds the interface in a real user population with real constraints, which supports task-centered design decisions (e.g., what info an inspector actually needs in a report) rather than generic UI choices.',
+
+						'Multi-file upload with per-file processing reduces user friction and supports batch workflows, an important usability improvement over single-file systems since it better matches how inspectors would realistically use the tool in the field (reviewing many segments/files per session).'
 					],
 					bad: [
-						'Improve model robustness by expanding the training dataset with more diverse track conditions, lighting variations, and additional defect types to increase generalization in real-world environments.',
-						'Enhance computer vision performance by exploring more advanced detection models and techniques for improved accuracy and faster processing.',
-						'Incorporate feedback from transportation professionals to refine the system’s usability and better align the tool with real-world inspection workflows.'
+						'Conduct user research with actual transportation/rail inspection professionals (contextual inquiry, task analysis, or usability testing) to validate that the interface, terminology, and report format match real inspection workflows rather than assumptions made during development.',
+
+						'Improve feedback and system status visibility (e.g., progress indicators during frame processing/detection, clear error states, and confidence-level cues on detections). This is so users are not left uncertain about what the system is doing or how much to trust a given result.',
+
+						'Refine information architecture and output design of the generated reports (layout, terminology, visual hierarchy of flagged defects) to reduce interpretation effort and better support quick, confident decision-making by non-technical field users.'
 					]
 				}
 			},
@@ -648,33 +676,39 @@
 						items: ['MATLAB']
 					}
 				],
-				desc: `As a Physics Research Assistant at UC Merced, I contributed to research investigating the magnetic behavior of Yttrium Iron Garnet (YIG) sphere arrays under controlled magnetic field conditions. The project explored spin resonance phenomena by analyzing how multiple YIG spheres interacted within externally applied magnetic fields.
-						
-				Using permanent magnets to precisely manipulate magnetic field strength, experiments were conducted to evaluate resonance frequency uniformity among the spheres and to investigate spin resonance coupling within the array. By collecting and analyzing experimental measurements, the research aimed to better understand the collective behavior of spin systems and characterize the resulting net spin resonance spectrum.`,
+				desc: `As a Physics Research Assistant at UC Merced, I worked under a professor whose research goals and standards I was responsible for meeting, investigating the magnetic behavior of Yttrium Iron Garnet (YIG) sphere arrays under controlled magnetic field conditions. The work paralleled core HCI/UX research methods, systematically testing variables, interpreting data, and iterating based on stakeholder feedback.
+
+				Using permanent magnets to precisely control field strength, I ran experiments evaluating resonance frequency uniformity and spin coupling within the array, regularly reporting findings and adjusting methodology based on my mentor's feedback. This is similar to incorporating stakeholder input into a UX research process. By analyzing the resulting data, I helped characterize the system's collective spin resonance behavior, sharpening my ability to translate complex data into clear, actionable conclusions.`,
 
 				sections: [
 					{
 						heading: 'Overview of Files and Technologies Used',
 						paragraphs: [
-							"The research consisted primarily of experimental procedures, measurement records, and data analysis rather than traditional software components. Laboratory equipment was used to generate and manipulate controlled magnetic fields while YIG sphere arrays served as the experimental medium for observing spin resonance behavior. Experimental measurements were systematically recorded and organized into datasets for analysis, allowing resonance frequencies across multiple YIG spheres to be compared under varying magnetic field conditions.",
-							"Supporting documentation included laboratory notes, experimental observations, and data tables used to evaluate resonance uniformity and identify evidence of spin resonance coupling. The research relied on precise experimental methodology, careful measurement, and quantitative analysis to investigate the collective behavior of magnetic spin systems."
+							"The research consisted primarily of experimental procedures, measurement records, and data analysis rather than traditional software components, a process that mirrored core UX research practices like structured data collection, comparative analysis, and organizing findings into a usable format. Laboratory equipment was used to generate and manipulate controlled magnetic fields while YIG sphere arrays served as the experimental medium for observing spin resonance behavior. Experimental measurements were systematically recorded and organized into datasets, allowing resonance frequencies across multiple spheres to be compared under varying conditions.",
+
+							"Supporting documentation included lab notes, experimental observations, and data tables used to evaluate resonance uniformity and identify evidence of spin coupling. The work relied on precise methodology, careful measurement, and quantitative analysis to investigate the collective behavior of the spin system, reinforcing skills in rigorous, evidence-based analysis that transfer directly to interpreting user research data.",
+
 						]
 					},
 					{
 						heading: 'Analysis',
 						images: ['images/yig/yig.png'],
 						paragraphs: [
-							"The objective of this research was to investigate how arrays of YIG spheres behave under controlled magnetic fields and to determine whether multiple spheres exhibit consistent resonance frequencies or demonstrate spin resonance coupling. By systematically varying magnetic field conditions and measuring resonance responses, the experiments sought to better understand the collective dynamics of interacting spin systems.",
-							"A key challenge involved maintaining precise experimental conditions while ensuring that measurements remained consistent across multiple trials. Small variations in magnetic field strength or sphere positioning could influence resonance behavior, making careful experimental control essential for producing reliable data. Collecting multiple observations allowed resonance frequencies to be compared across the array and helped identify patterns in the overall spin resonance spectrum.",
-							"Beyond the physics itself, the project emphasized scientific methodology and quantitative reasoning. Rather than focusing solely on obtaining expected results, the research required careful observation, documentation, and interpretation of experimental data. This experience reinforced the importance of reproducibility, precision, and systematic experimentation when investigating complex physical systems."
+							"The objective of this research was to investigate how arrays of YIG spheres behave under controlled magnetic fields and to determine whether multiple spheres exhibit consistent resonance frequencies or demonstrate spin resonance coupling. By systematically varying magnetic field conditions and measuring resonance responses, the experiments sought to better understand the collective dynamics of interacting spin systems. The same kind of controlled, variable-driven investigation used in usability research to isolate what's actually driving a user's behavior.",
+
+							"A key challenge involved maintaining precise experimental conditions while ensuring that measurements remained consistent across multiple trials. Small variations in magnetic field strength or sphere positioning could influence resonance behavior, making careful experimental control essential for producing reliable data. Collecting multiple observations allowed resonance frequencies to be compared across the array and helped identify patterns in the overall spin resonance spectrum, reinforcing how important consistent conditions are for drawing trustworthy conclusions from any kind of test.",
+
+							"Beyond the physics itself, the project emphasized scientific methodology and quantitative reasoning. Rather than focusing solely on obtaining expected results, the research required careful observation, documentation, and interpretation of experimental data. This experience reinforced the importance of reproducibility, precision, and systematic experimentation, which are the principles that carry over directly to conducting and evaluating user research."
 						]
 					},
 					{
 						heading: 'Reflection',
 						paragraphs: [
-							"Working on the YIG Array research project introduced me to the discipline and attention to detail required in experimental scientific research. Unlike software development, where problems can often be debugged through code, laboratory research demanded careful control of physical variables, repeated experimentation, and precise measurement to produce meaningful results.",
-							"One of the most valuable aspects of the project was learning how to collect and analyze quantitative data while collaborating within a research environment. The experience strengthened my ability to approach problems methodically, evaluate experimental outcomes objectively, and recognize the importance of reproducibility in scientific investigations.",
-							"This research experience laid a strong foundation in analytical thinking and experimental methodology. The skills I developed, including data analysis, hypothesis-driven experimentation, and scientific collaboration, continue to influence how I approach research and problem solving across interdisciplinary domains."
+							"Working on the YIG Array research project introduced me to the discipline and attention to detail required in experimental scientific research. Unlike software development, where problems can often be debugged through code, laboratory research demanded careful control of physical variables, repeated experimentation, and precise measurement to produce meaningful results — a mindset I've since carried into how I approach usability testing.",
+
+							"One of the most valuable aspects of the project was learning how to collect and analyze quantitative data while collaborating within a research environment and reporting progress to my professor. The experience strengthened my ability to approach problems methodically, evaluate outcomes objectively, and recognize the importance of reproducibility. These skills that directly inform how I now structure and interpret user research studies.",
+
+							"This research experience laid a strong foundation in analytical thinking and experimental methodology. The skills I developed, including data analysis, hypothesis-driven experimentation, and working within a stakeholder's expectations, continue to influence how I approach UX research and problem solving across interdisciplinary domains."
 						]
 					}
 				],
@@ -683,17 +717,17 @@
 					goodHeader: 'Benefits',
 					badHeader: 'What Can Be Improved',
 					good: [
-						'Provided hands-on experience conducting experimental scientific research.',
-						'Developed practical understanding of magnetic resonance and spin system behavior.',
+						'Provided hands-on experience conducting rigorous, structured research from hypothesis through data collection and analysis.',
+						'Developed a practical understanding of how to isolate variables and interpret system behavior under controlled conditions.',
 						'Strengthened quantitative data collection and analytical reasoning skills.',
-						'Reinforced the importance of reproducibility and controlled experimentation.',
-						'Fostered collaboration within an academic research laboratory.',
-						'Demonstrated the application of theoretical physics concepts through real-world experimentation.'
+						'Reinforced the importance of reproducibility and controlled experimentation when validating results.',
+						'Fostered collaboration and communication within a research environment, including reporting findings to a stakeholder (my professor).',
+						'Demonstrated the ability to translate theoretical concepts into real-world experimentation and practical application.'
 					],
 					bad: [
-						'Expand experimental testing by analyzing a wider range of magnetic field strengths, frequencies, and material configurations to better characterize YIG array behavior.',
-						'Improve data processing and visualization techniques to identify patterns in resonance behavior and magnetic interactions more effectively.',
-						'Investigate how variations in array design and material properties influence signal propagation and magnetic coupling.',
+						'Improve data visualization methods to better communicate findings and make results easier to interpret at a glance.',
+						'Establish more structured check-ins or reporting formats with stakeholders to streamline feedback and reduce misalignment during the research process.',
+						'Document experimental methodology more thoroughly so findings are accessible to someone outside the immediate research context.'
 					]
 				}
 			}
