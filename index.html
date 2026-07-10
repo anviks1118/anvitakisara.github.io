@@ -48,7 +48,7 @@
 				<h2>people understand</h2>
 			</div>
 			<div class="main-intro">
-				<p>I'm an aspiring UX Engineer who is passionate about making the digital world easier to navigate.</p>
+				<p>I'm an aspiring UX Designer and UX Engineer who is passionate about making the digital world easier to navigate.</p>
 			</div>
 		</div>
 		<div class="main-photo">
@@ -121,13 +121,11 @@
 		<div id="about" class="about-container">
 			<h3>ABOUT</h3>
 			<h2>Bridging technical complexity and human-centered clarity</h2>
-			<p>Hi, I’m Anvita Kisara! I’m a Computer Science and Engineer and UX/UI Engineer/ Designer dedicated to bridging the gap between human behavior and digital design. I love the process of design to development, whether it's sketching wireframes or thinking through the logic behind a system, I relish every step of the creative process. My journey into UX has been marked by a commitment to understanding not just how something works, but why it should work that way for the people using it.
+			<p>Hi, I’m Anvita Kisara! I’m a UX/UI Engineer/ Designer dedicated to bridging the gap between human behavior and digital design. I love the process of design to development, whether it's sketching wireframes or thinking through the logic behind a system, I relish every step of the creative process. My journey into UX has been marked by a commitment to understanding not just how something works, but why it should work that way for the people using it.
 				
-				With my Computer Science and Engineering major, I learned to think systematically about problems. Through my projects, I gained hands-on experience translating technical constraints into real-world solutions, building a solid foundation in engineering and problem-solving. 
+				I majored in Computer Science and Engineering during my undergrad, where I learned to think systematically about problems. Through my projects, I gained hands-on experience translating technical constraints into real-world solutions, building a solid foundation in engineering and problem-solving. Building on that foundation, I've been developing my skills in user-centered design: conducting user research, building journey maps and personas, and creating prototypes that meet end-users' specific needs. My technical background gave me a strong sense of functionality; this shift has pushed me to lead with empathy and center the human experience in every design decision.		
 				
-				Building on that foundation, I've been developing my skills in user-centered design: conducting user research, building journey maps and personas, and creating prototypes that meet end-users' specific needs. My technical background gave me a strong sense of functionality; this shift has pushed me to lead with empathy and center the human experience in every design decision.		
-				
-				I'm excited to bring that same care to work that genuinely improves people's lives by creating experiences that make wellness and health information more accessible, intuitive, and human-centered.</p>
+				With this combined foundation in engineering and design, I'm excited to bring that same care to work that genuinely improves people's lives by creating experiences that make wellness and health information more accessible, intuitive, and human-centered.</p>
 		</div>
 
 		<div id="skills" class="skills-container">
@@ -140,7 +138,6 @@
 				<li>Data Analysis &amp; Interpretation</li>
 				<li>Human-Centered Design</li>
 				<li>GUI Development</li>
-				<li>Wireframing &amp; Prototyping</li>
 				<li>Python</li>
 				<li>JavaScript</li>
 				<li>AWS Cloud Services (Rekognition &amp; Sagemaker)</li>
@@ -359,25 +356,27 @@
 					{
 						heading: 'Overview of Files and Technologies Used',
 						paragraphs: [
-							"The technical architecture of the Predictive Text App is built on a clean, decoupled frontend stack designed to function seamlessly as a high-fidelity data collection instrument. At the structural core, the index.html file provides an accessible, responsive viewport configuration while utilizing preconnected links to the Google Fonts API to load the highly legible Inter typeface with minimal latency. Visual semantics and cognitive load management are controlled via the style.css file, which implements a soothing, low-contrast color palette, fluid CSS Grid and Flexbox layouts, and subtle micro-interactions to promote a deep-focus writing state without distracting visual clutter. The engine of the platform is powered by React and JavaScript (ES6+), utilizing component state management to orchestrate real-time UI changes—such as live writing statistics and persistent prompt overlays—while simultaneously decoupling data ingestion from the rendering thread. By hooking deeply into native browser web APIs via event-driven programming, the system continuously intercepting raw user interaction streams (onKeyDown, onSelectionChange, onPaste) to log micro-behaviors like typing cadence, deletion events, and clipboard updates efficiently without causing input lag or degrading application performance."
+							"The Predictive Text App was developed using React, JavaScript, HTML, and CSS to create a responsive writing environment that doubles as a behavioral data collection platform. The frontend architecture separates the user interface from data capture, allowing users to write naturally while the system records interaction events such as keystrokes, deletions, text selections, and clipboard activity. React state management enables real-time updates to prompts and writing statistics without affecting performance, while responsive layouts built with CSS Grid and Flexbox ensure a consistent experience across devices. This architecture supports accurate behavioral data collection while maintaining a smooth, uninterrupted writing experience."
 						]
 					},
 					{
 						heading: 'Analysis',
 						paragraphs: [
-							"From a system architecture perspective, this platform functions as a high-fidelity data ingestion pipeline disguised as a minimalist text editor. The engineering complexity lies in the asynchronous event-handling layer. In a typical React application, user inputs are captured strictly to update the state of the view (e.g., updating a text string in a text area). In this application, a single keystroke triggers a parallel execution track: updating the user interface synchronously while simultaneously generating, processing, and queuing behavioral data packets (tracking deletions, typing cadence, clipboard interrupts, and cursor coordinates) asynchronously. The front-end design successfully decouples data collection logic from the rendering thread, ensuring that the intensive telemetry logging never drops frames or causes input lag—a critical UX requirement, as input latency would inherently distort natural human typing behavior and ruin the validity of the research data."
+							"Architecturally, the application extends a traditional React text editor by combining real-time interface updates with continuous behavioral data collection. Each user interaction updates the interface while simultaneously capturing events such as keystrokes, deletions, cursor movement, text selection, and clipboard activity. By separating the data collection logic from the rendering process, the application remains responsive even while recording detailed interaction data. This approach minimizes input latency, helping preserve natural typing behavior and improving the quality of the behavioral data used for research."
 						]
 					},
 					{
 						heading: 'Reflection',
 						paragraphs: [
-							"Data Quality Requires Intentional Design: I learned that collecting high-quality behavioral data requires much more than simply recording user input. Every interface decision, from layout organization to event handling—influences how naturally users interact with a system, which directly impacts data integrity. Designing for the User, Not the Tech: Features like disabled action states, responsive layouts, fullscreen image previews, and persistent writing prompts were implemented not because they were complex to code, but because they radically improved usability and reduced interruptions during writing sessions. Performance-Minded Engineering: Implementing simultaneous event listeners for keyboard, mouse, selection, clipboard, and text input events provided excellent hands-on experience with advanced React event handling. It reinforced the absolute importance of writing modular, maintainable code that can capture deep metrics without degrading application performance."
+							"Data quality requires intentional design, and collecting high-quality behavioral data takes more than simply recording user input. Every interface decision, from layout organization to event handling, shapes how naturally users interact with a system, which directly affects data integrity.",
+							"Design for the user, not the tech. Features like disabled action states, responsive layouts, fullscreen image previews, and persistent writing prompts weren't added because they were technically complex, they were added because they meaningfully improved usability and reduced interruptions during writing sessions.",
+							"Performance-minded engineering. Implementing simultaneous event listeners for keyboard, mouse, selection, clipboard, and text input gave me hands-on experience with advanced React event handling, and reinforced how important it is to write modular, maintainable code that captures deep metrics without degrading performance."
 						]
 					},
 					{
 						heading: 'Challenges: Balancing Data with Usability',
 						paragraphs: [
-							"A significant design consideration involved balancing comprehensive data collection with seamless usability. The application continuously monitors keyboard and mouse interactions—including typing speed, deletion events, cursor positioning, text selection, and clipboard usage—without disrupting the user's natural writing flow. Implementing these intensive event listeners required careful performance coordination to ensure accurate behavioral logging while maintaining a highly responsive interface."
+							"A significant design consideration involved balancing comprehensive data collection with seamless usability. The application continuously monitors keyboard and mouse interactions, including typing speed, deletion events, cursor positioning, text selection, and clipboard usage, without disrupting the user's natural writing flow. Implementing these intensive event listeners required careful performance coordination to ensure accurate behavioral logging while maintaining a highly responsive interface."
 						]
 					},
 					{
@@ -459,7 +458,9 @@
 						heading: 'Reflection',
 						paragraphs: [
 							"Working on the ESN project introduced me to computational approaches inspired by neural dynamics, expanding my understanding of how dynamic systems represent and process sequential information. I gained experience implementing reservoir computing architectures, preparing sequential datasets, and investigating model behavior through experimental analysis.",
-							"One of the most valuable lessons I learned from this research was that successful computational modeling requires more than implementation—it requires thoughtful experimentation and analysis. Adjusting reservoir parameters required careful observation, repeated testing, and interpretation of system behavior rather than relying on default configurations. This iterative process strengthened my analytical thinking and improved my ability to evaluate experimental results.",
+							
+							"One of the most valuable lessons I learned from this research was that successful computational modeling requires more than implementation, it requires thoughtful experimentation and analysis. Adjusting reservoir parameters required careful observation, repeated testing, and interpretation of system behavior rather than relying on default configurations. This iterative process strengthened my analytical thinking and improved my ability to evaluate experimental results.",
+							
 							"This project deepened my appreciation for interdisciplinary research by demonstrating how computational models can contribute to the study of cognitive processes. Exploring how recurrent neural systems process temporal information provided insight into both artificial systems and theories of human cognition, reinforcing my interest in applying computational approaches to research problems involving intelligent systems and human-centered technology."
 						]
 					}
@@ -512,7 +513,9 @@
 					{
 						heading: 'Overview of Files and Technologies Used',
 						paragraphs: [
-							"The Dyadic Association project was developed using Python as the primary programming language to automate cognitive science experiments investigating associative reasoning between LLMs. The application consisted of modular components responsible for conversation orchestration, API communication, transcript processing, and structured data collection. A central conversation manager maintained coherent multi-turn interactions by coordinating alternating turn-taking between AI agents while preserving conversational context throughout each experiment. LLM APIs were integrated to generate human-like associative responses, with JSON used to structure prompts, responses, and experimental metadata. Supporting scripts automated transcript processing and organized conversation logs into research-ready datasets for linguistic and semantic analysis. Version control was managed using Git, enabling collaborative development with my faculty mentor and Ph.D. researcher. The modular architecture allowed the system to be easily expanded for future experiments while ensuring reliable, reproducible conversational workflows for Human-Computer Interaction (HCI) and cognitive science research."
+							"The Dyadic Association project was developed using Python as the primary programming language to automate cognitive science experiments investigating associative reasoning between LLMs. The application consisted of modular components responsible for conversation orchestration, API communication, transcript processing, and structured data collection. A central conversation manager maintained coherent multi-turn interactions by coordinating alternating turn-taking between AI agents while preserving conversational context throughout each experiment.", 
+							
+							"LLM APIs were integrated to generate human-like associative responses, with JSON used to structure prompts, responses, and experimental metadata. Supporting scripts automated transcript processing and organized conversation logs into research-ready datasets for linguistic and semantic analysis. Version control was managed using Git, enabling collaborative development with my faculty mentor and Ph.D. researcher. The modular architecture allowed the system to be easily expanded for future experiments while ensuring reliable, reproducible conversational workflows for Human-Computer Interaction (HCI) and cognitive science research."
 						]
 					},
 					{
@@ -527,7 +530,9 @@
 					{
 						heading: 'Reflection',
 						paragraphs: [
-							"Working on the Dyadic Association Project gave me valuable experience collaborating within an interdisciplinary research environment where software engineering directly supported cognitive science research. Rather than building software for consumer applications, I developed tools that enabled researchers to conduct experiments more efficiently and consistently. One of the most rewarding aspects of the project was learning how technical implementation influences research quality. Building reliable conversation orchestration required thinking beyond writing functional code; I had to ensure that each interaction followed consistent experimental procedures while preserving the natural flow of conversation. This experience strengthened my appreciation for designing systems that prioritize reliability, reproducibility, and data integrity. The project also improved my ability to collaborate across disciplines. Throughout development, I worked closely with my faculty mentor and Ph.D. researcher, regularly discussing implementation decisions, reporting progress, and refining the system based on evolving research objectives. Translating research requirements into technical solutions taught me how to communicate effectively with stakeholders who approached problems from different academic perspectives. Perhaps the most significant takeaway was seeing how AI can be used as a research tool rather than simply an end product. Developing this platform reinforced my interest in Human-Computer Interaction by demonstrating how thoughtful system design can facilitate meaningful investigations into human cognition, language, and interaction. It strengthened my passion for building technologies that bridge software engineering, AI, and user-centered research."
+							"Working on the Dyadic Association Project gave me valuable experience collaborating within an interdisciplinary research environment where software engineering directly supported cognitive science research. Rather than building software for consumer applications, I developed tools that enabled researchers to conduct experiments more efficiently and consistently. One of the most rewarding aspects of the project was learning how technical implementation influences research quality. Building reliable conversation orchestration required thinking beyond writing functional code; I had to ensure that each interaction followed consistent experimental procedures while preserving the natural flow of conversation. This experience strengthened my appreciation for designing systems that prioritize reliability, reproducibility, and data integrity.",
+							
+							"The project also improved my ability to collaborate across disciplines. Throughout development, I worked closely with my faculty mentor and Ph.D. researcher, regularly discussing implementation decisions, reporting progress, and refining the system based on evolving research objectives. Translating research requirements into technical solutions taught me how to communicate effectively with stakeholders who approached problems from different academic perspectives. Perhaps the most significant takeaway was seeing how AI can be used as a research tool rather than simply an end product. Developing this platform reinforced my interest in Human-Computer Interaction by demonstrating how thoughtful system design can facilitate meaningful investigations into human cognition, language, and interaction. It strengthened my passion for building technologies that bridge software engineering, AI, and user-centered research."
 						]
 					}
 				],
