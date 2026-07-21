@@ -40,9 +40,6 @@
 	<!-- Main Title and Tagline -->
 	<div class="main-container">
 		<div class="main-text">
-			<div class="main-position">
-				<p>UX/UI ENGINEER</p>
-			</div>
 			<div class="main-title">
 				<h1>Designing interfaces</h1>
 				<h2>people understand</h2>
@@ -210,8 +207,8 @@
 	<div id="connect" class="connect-container">
 		<div class="connect-card">
 			<p class="connect-label">LET'S CONNECT</p>
-			<h2 class="connect-heading">Let's shape a positive future together</h2>
-			<p class="connect-text">Design is more than a visual language. It is a tool for transformation. If you are building a team that values purposeful, human-centered solutions, I'd love to talk.</p>
+			<h2 class="connect-heading">Let's advance real-world AI together</h2>
+			<p class="connect-text">High-quality visual data is what allows autonomous systems to understand and navigate the physical world. I’m always excited to connect with teams building cutting-edge robotics, computer vision, and machine learning models -let’s talk!</p>
 			<a href="mailto:anvitakisara@gmail.com" class="connect-button">
 				<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 6-10 7L2 6"></path></svg>
 				anvitakisara@gmail.com
@@ -409,17 +406,15 @@
 					{
 						heading: 'Usability Testing & Findings',
 						paragraphs: [
-							"We validated the design through a mix of unit and integration testing for correctness, paired with live usability testing on physical iOS and Android devices through Expo, since a fitness app's real usability only shows up once it's actually worn and used, not just simulated.",
+							"System stability, API routing, and data integrity were validated using Pytest for backend unit testing, paired with live integration testing on physical iOS and Android devices via Expo to evaluate real-world system performance beyond simulated environments. This physical hardware evaluation surfaced critical platform-specific execution discrepancies between iOS and Android runtimes that went undetected in standard simulator checks, underscoring the necessity of cross-platform testing for shared data contracts.",
 
-							"That testing surfaced two meaningful UX findings. First, some screens, particularly the workout-viewing flow, created friction and made certain features harder to locate than we'd intended in our design mockups, a gap between our design intent and the executed interface that we didn't fully close within the semester. Second, we found a platform-specific usability gap: iOS users moved through the app without issue, while Android users ran into problems our iOS-centric early testing hadn't caught, underscoring how much cross-platform testing matters even when the interface design is shared.",
-
-							"We also recognized a scope limitation in our final evaluation: the app currently only generates step recommendations, when a more complete and genuinely user-centered health experience would need to account for a broader range of fitness goals and activity types, not just walking."
+							"Additionally, testing identified execution friction within the workout-viewing flow and highlighted clear scope boundaries in the current feature pipeline—demonstrating that generating predictions solely from step counts limits overall utility, and that scaling the system requires expanding feature ingestion to handle multi-modal sensor streams such as heart rate logs and continuous physical telemetry.",
 						]
 					},
 					{
 						heading: 'Reflection',
 						paragraphs: [
-							"HealthIQ was my first time designing a profile experience meant to make a machine-learning output feel personal rather than abstract. It reinforced a principle I've carried into my other HCI and UX work since: a technically accurate recommendation is only as good as whether the person receiving it understands and trusts where it came from. Good UX for an ML-driven feature isn't just about the interface around it, it's about designing the disclosure of how and why a recommendation was made.",
+							"Building HealthIQ reinforced the importance of creating resilient system architecture and maintaining explicit data contracts between client applications and backend ML models. Serving as the bridge between interface execution and predictive backend logic demonstrated that a machine learning model is only as effective as the data pipeline delivering and validating its output. Moving forward, the primary opportunity for scaling this system lies in expanding feature ingestion beyond single-metric step counts to handle multi-modal sensor streams and real-time model performance monitoring.",
 
 							"Coordinating a five-person team across design, frontend, backend, and testing also taught me how HCI principles have to survive contact with implementation constraints. I was often the one checking whether what the backend generated actually displayed and made sense on the user-facing side, which meant advocating for the user's perspective at points where it would have been easier to ship whatever the system technically produced.",
 
