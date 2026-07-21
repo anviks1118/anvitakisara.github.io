@@ -364,9 +364,9 @@
 						items: ['Pytest', 'Git', 'GitHub']
 					}
 				],
-				desc: `HealthIQ is a fitness mobile app I designed and built with a five-person team for my Human-Computer Interaction course, centered on a question we kept coming back to throughout the design process: how do you turn a raw number, steps taken, into something a user actually feels motivated by? The app features a user profile that captures user demographics and reflects back ML-driven step recommendations tailored to each person's specific fitness goals.
+				desc: `HealthIQ is a fitness mobile app I created and built with a team, centered on a question we kept coming back to the process: how do you turn a raw number, steps taken, into something a user actually feels motivated by? The app features a user profile that captures user demographics and reflects back ML-driven step recommendations tailored to each person's specific fitness goals.
 				
-				Our design process started with a problem, not a feature list. We observed that most fitness apps leave users feeling abandoned, tracking steps with no context for what the number means, or gated behind a paywall that discourages consistency. From there, we worked through goals and motivation, low-fidelity design, and iterative usability decisions before writing a line of implementation code, treating the interface itself as the primary design artifact.
+				Our app process started with a problem, not a feature list. We observed that most fitness apps leave users feeling abandoned, tracking steps with no context for what the number means, or gated behind a paywall that discourages consistency. From there, we worked through goals and motivation, low-fidelity design, and iterative usability decisions before writing a line of implementation code, treating the interface itself as the primary design artifact.
 				
 				I owned the user profile experience and cross-team usability testing, focusing on how the app captures a user's data and reflects it back to them in a way that feels motivating and trustworthy rather than clinical.`,
 
@@ -384,7 +384,7 @@
 						paragraphs: [
 							"Before any design or code work began, our team grounded the project in a user problem rather than a feature idea. We asked: what makes people abandon fitness apps? Two patterns stood out. First, most apps track steps without giving users any sense of what the number means or why it matters to them personally, so the data feels disconnected from any real motivation. Second, many apps create a digital divide by gating meaningful features behind a paid plan, which discourages the very users who most need an easy on-ramp to an active lifestyle.",
 
-							"That framing shaped our core design goals: keep the user's purpose for exercising visible throughout the experience, transform raw activity metrics into a legible sense of progress, and celebrate small wins as a path toward bigger ones. We wanted a user opening the app to feel supported and understood, not judged by a number."
+							"That framing shaped our core goals: keep the user's purpose for exercising visible throughout the experience, transform raw activity metrics into a legible sense of progress, and celebrate small wins as a path toward bigger ones. We wanted a user opening the app to feel supported and understood, not judged by a number."
 						]
 					},
 					{
@@ -394,17 +394,17 @@
 
 							"On the UI side, our central question was how to format the interface so it felt intuitive to first-time users without feeling crowded or, at the other extreme, sparse and empty. We iterated on the user profile and onboarding screens specifically to keep cognitive load low: clear typography, a simple sign-up-versus-login entry point, and a visual hierarchy that put the user's personalized goal front and center rather than burying it under settings or navigation.",
 
-							"I focused on the user profile experience, since that screen is where a user's demographic and activity data gets translated into something personal. My design priority there was transparency: making sure the interface showed users not just their recommended step goal, but enough context that the number felt earned and specific to them, rather than an arbitrary system output they had no reason to trust."
+							"I focused on the user profile experience, since that screen is where a user's demographic and activity data gets translated into something personal. I prioritized system transparency and model explainability. Rather than serving arbitrary predictions, the interface contextualized generated outputs with baseline user telemetry—building trust by making the system's reasoning explicit."
 						]
 					},
 					{
 						heading: 'Analysis',
 						paragraphs: [
-							"The core design challenge in HealthIQ was translating a machine-learning output into something a user could actually trust at a glance. XGBoost generated a recommended step goal from each user's demographic and activity data, but a number alone doesn't build confidence, so the profile screen had to carry enough surrounding context (how the goal was calculated, what it was based on) for that recommendation to feel earned rather than arbitrary.",
+							"The core challenge in HealthIQ was translating a machine-learning output into something a user could actually trust at a glance. XGBoost generated a recommended step goal from each user's demographic and activity data, but a number alone doesn't build confidence, so the profile screen had to carry enough surrounding context (how the goal was calculated, what it was based on) for that recommendation to feel earned rather than arbitrary.",
 
 							"That tension between technical accuracy and legibility showed up throughout the interface, not just the profile screen. The onboarding flow had to collect enough demographic data for the model to produce a meaningful recommendation without feeling like an interrogation, which meant deciding what to ask up front versus what could be inferred or added later. We also had to design around asynchronous state: a user's first recommendation isn't available until after onboarding completes and the backend responds, so the interface needed clear loading and transition states rather than leaving the user staring at an empty screen.",
 
-							"Coordinating this across a five-person team also meant the UI layer had to be resilient to backend changes made mid-semester. Keeping the frontend and the FastAPI contract decoupled let the recommendation model evolve without forcing a redesign of the profile screen each time, which turned out to be one of the more practical lessons of the project: good interface architecture has to anticipate that the system behind it won't stay static."
+							"Coordinating the team also meant the UI layer had to be resilient to backend changes made mid-semester. Keeping the frontend and the FastAPI contract decoupled let the recommendation model evolve without forcing a redesign of the profile screen each time, which turned out to be one of the more practical lessons of the project: good interface architecture has to anticipate that the system behind it won't stay static."
 						]
 					},
 					{
@@ -431,16 +431,14 @@
 					goodHeader: 'Benefits',
 					badHeader: 'What Can Be Improved',
 					good: [
-						'Grounded the design in a clearly articulated user problem (motivation and abandonment) before any implementation began, keeping the team focused on user needs over feature-building.',
-						'Translates raw step data into a personalized, legible goal, directly addressing the cognitive-overload problem we identified in existing fitness apps.',
-						'User profile design keeps the reasoning behind each recommendation visible, supporting user trust rather than presenting an unexplained system output.',
-						'Cross-platform usability testing on physical iOS and Android devices surfaced real interaction differences that testing in a simulator alone would have missed.',
-						'Clear ownership across the profile, sign-up, home, feed, and backend experiences supported a cohesive end-to-end product within a single semester.'
-					],
+						'Grounded system architecture and data contracts in clear user problems (motivation and retention) before execution, keeping technical development focused on usability over arbitrary feature building.',
+						'Engineered pipelines to transform raw step data into clear, legible metrics—reducing cognitive overload while preserving data integrity from ingestion to interface.',
+						'Designed the profile logic and backend data flow to expose the reasoning behind recommendations, supporting user trust rather than presenting unexplained system outputs.',
+						'Executed cross-platform testing across physical iOS and Android hardware, surfacing real-world interaction and performance discrepancies that simulator environments missed.'					],
 					bad: [
-						'Close the gap between intended interaction design and shipped experience: resolve the Android-specific usability issues and re-validate the workout-viewing flow that created friction for users.',
-						'Conduct structured usability testing with users outside the team (think-aloud sessions, task completion rates) rather than relying primarily on internal team testing.',
-						'Expand beyond step recommendations into fuller workout guidance, and let users choose their own goal type (weight loss, staying active, etc.) instead of a single default target.'					]
+						'Implement structured usability testing (think-aloud protocols, task completion benchmarking) alongside automated data testing to validate both backend stability and human-system interaction.',
+						'Expand feature ingestion beyond single-metric step counts to handle multi-modal health telemetry, allowing users to customize target objectives (e.g., active recovery, endurance) rather than relying on a static default.'					
+					]
 				}
 			},
 
@@ -489,7 +487,7 @@
 					{
 						heading: 'Challenges: Balancing Data with Usability',
 						paragraphs: [
-							"A significant design consideration involved balancing comprehensive data collection with seamless usability. The application continuously monitors keyboard and mouse interactions, including typing speed, deletion events, cursor positioning, text selection, and clipboard usage, without disrupting the user's natural writing flow. Implementing these intensive event listeners required careful performance coordination to ensure accurate behavioral logging while maintaining a highly responsive interface."
+							"A significant consideration involved balancing comprehensive data collection with seamless usability. The application continuously monitors keyboard and mouse interactions, including typing speed, deletion events, cursor positioning, text selection, and clipboard usage, without disrupting the user's natural writing flow. Implementing these intensive event listeners required careful performance coordination to ensure accurate behavioral logging while maintaining a highly responsive interface."
 						]
 					},
 					{
@@ -549,7 +547,7 @@
 				],
 				desc: `This project explored how Echo State Networks (ESNs), a specialized type of recurrent neural network, can capture temporal dependencies in time-series data while maintaining computational efficiency. Using the Japanese Vowels benchmark dataset, I implemented, configured, and evaluated ESN models to better understand how dynamic neural systems process sequential information.
 						
-				It explored computational modeling and data analysis techniques to investigate temporal pattern recognition, applying reservoir computing concepts to analyze and classify sequential data within a cognitive science research context. This work, while distinct from interface design, deepened my thinking about how systems can make sense of information that unfolds over time.`,
+				It explored computational modeling and data analysis techniques to investigate temporal pattern recognition, applying reservoir computing concepts to analyze and classify sequential data within a cognitive science research context. This work deepened my thinking about how systems can make sense of information that unfolds over time.`,
 
 				sections: [
 					{
@@ -557,7 +555,7 @@
 						paragraphs: [
 							"The project consisted of modular Python scripts responsible for data preprocessing, model configuration, training, evaluation, and visualization. Sequential speech data from the Japanese Vowels dataset was cleaned and formatted before being processed through Echo State Network architectures built using ReservoirPy. Separate modules handled reservoir initialization, hyperparameter configuration, model training, prediction, and performance evaluation, while visualization scripts generated plots to analyze classification accuracy and reservoir behavior.",
 
-							"NumPy enabled efficient numerical computations, Matplotlib produced graphical representations of experimental results, and Scikit-learn assisted with preprocessing and evaluation metrics. Git and GitHub supported version control throughout development, and Jupyter Notebook provided an interactive environment for experimentation and iterative testing. The modular structure allowed experiments to be easily modified, making it possible to test different reservoir configurations and compare model performance across multiple experimental conditions, a process of iterating based on results that I've since carried into how I approach design work."
+							"NumPy enabled efficient numerical computations, Matplotlib produced graphical representations of experimental results, and Scikit-learn assisted with preprocessing and evaluation metrics. Git and GitHub supported version control throughout development, and Jupyter Notebook provided an interactive environment for experimentation and iterative testing. The modular structure allowed experiments to be easily modified, making it possible to test different reservoir configurations and compare model performance across multiple experimental conditions, a process of iterating based on results that I've since carried."
 						]
 					},
 					{
@@ -629,7 +627,7 @@
 						
 				This research project investigated how Large Language Models (LLMs) emulate these cognitive pathways through simulated dyadic association. I engineered the conversational coordination mechanisms for an automated framework that orchestrated multi-turn interactions between autonomous AI agents, optimizing for stable turn-taking, fluid dialogic pacing, and predictable feedback loops. By establishing rigorous architectural control over the agent interaction sequences, the system allowed researchers to systematically isolate and analyze behavioral touchpoints and dialogue flow under tightly controlled experimental conditions.	
 							
-				Alongside the system development, I mapped, transcribed, and structured empirical human conversational sessions into high-fidelity behavioral datasets to compare human collaboration patterns directly against machine outputs. By bridging cognitive science, natural language processing (NLP), and interaction design, this work contributes to a deeper understanding of how humans perceive and collaborate with language-based agents. Ultimately, the project demonstrates how deliberate conversational UX engineering can uncover the boundaries of machine reasoning and inform the development of more transparent, reliable, and human-centered AI systems.`,
+				Alongside the system development, I mapped, transcribed, and structured empirical human conversational sessions into high-fidelity behavioral datasets to compare human collaboration patterns directly against machine outputs. By bridging cognitive science, natural language processing (NLP), and interaction design, this work contributes to a deeper understanding of how humans perceive and collaborate with language-based agents. Ultimately, the project demonstrates how we can uncover the boundaries of machine reasoning and inform the development of more transparent, reliable, and human-centered AI systems.`,
 			
 			sections: [
 					{
@@ -649,7 +647,7 @@
 
 						"One of the primary technical challenges involved maintaining coherent conversational flow across multiple interaction rounds. Unlike a simple chatbot that responds independently to each prompt, the system needed to preserve conversational context, alternate speakers correctly, and ensure that each response reflected the evolving dialogue. These are the same fundamentals that determine whether any conversational interface, human-facing or not, feels coherent rather than disjointed: this required implementing conversation orchestration logic that managed turn-taking, prompt sequencing, and API communication while preventing interruptions or inconsistent dialogue states.",
 
-						"This project centered on designing a reliable interaction system — one where the underlying problem was the same one conversational UX design has to solve: how do you structure an exchange so it feels continuous and trustworthy rather than mechanical? The quality of the collected research data depended on the stability and consistency of the conversational framework, and small implementation details, such as preserving context between turns and handling API failures gracefully, directly affected whether the resulting dialogue reflected natural, coherent communication.",
+						"The goal of this project was to build a robust conversational interaction framework that balances intuitive UX with reliable data collection. In conversational AI, data quality depends heavily on system continuity. By engineering graceful error-handling for API failures and preserving state context between turns, the system ensured that dialogue felt transparent and natural while producing high-fidelity evaluation data.",
 
 						"This project also highlighted the intersection of AI and cognitive science. By automating conversational experiments, researchers could generate significantly larger datasets than would be practical through manual human studies alone, enabling broader investigation into where AI-generated language tracks human association patterns and where it diverges. These findings carry direct implications for designing conversational systems that communicate the way people actually think."
 						]
@@ -661,7 +659,7 @@
 
 							"Building reliable conversation orchestration required thinking beyond writing functional code; I had to ensure that each interaction preserved the natural flow of conversation, the same underlying goal that shapes any well-designed conversational interface. This experience strengthened my appreciation for designing systems that prioritize reliability, reproducibility, and natural interaction.",
 							
-							"The project also improved my ability to collaborate across disciplines. Throughout development, I worked closely with my faculty mentor and Ph.D. researcher, regularly discussing implementation decisions, reporting progress, and refining the system based on evolving research objectives. Translating research requirements into technical solutions taught me how to communicate effectively with stakeholders who approached problems from different academic perspectives. Perhaps the most significant takeaway was seeing how AI can be used as a research tool for studying communication itself, not just as an end product. It reinforced my interest in Human-Computer Interaction by showing me that good interaction design starts with understanding how people actually communicate. The technical implementation is what makes that understanding usable."
+							"The project also improved my ability to collaborate across disciplines. Throughout development, I worked closely with my faculty mentor and Ph.D. researcher, regularly discussing implementation decisions, reporting progress, and refining the system based on evolving research objectives. Translating research requirements into technical solutions taught me how to communicate effectively with stakeholders who approached problems from different academic perspectives. Perhaps the most significant takeaway was seeing how AI can be used as a research tool for studying communication itself, not just as an end product. It reinforced my interest in Human-Computer Interaction by showing me that good interaction starts with understanding how people actually communicate. The technical implementation is what makes that understanding usable."
 						]
 					}
 				],
@@ -670,7 +668,7 @@
 					goodHeader: 'Benefits',
 					badHeader: 'What Can Be Improved',
 					good: [
-						'Automated a traditionally manual cognitive science experiment, increasing research efficiency for studying human-AI communication patterns.',
+						'Automated a manual cognitive science protocol into a structured pipeline, streamlining research workflows and enabling scalable analysis of human-AI communication patterns.',
 						'Produced structured, reproducible conversational datasets suitable for analyzing how naturally AI-generated dialogue compares to human interaction.',
 						'Modular conversation orchestration allows future experimental expansion into new dimensions of conversational behavior.',
 						'Simulated multi-turn dialogue while maintaining coherent conversational flow — the same context-preservation and turn-taking challenges central to designing any natural-feeling conversational interface.',
@@ -679,7 +677,7 @@
 					],
 					bad: [
 						'Expand the system by incorporating larger and more diverse human conversation datasets to better understand variations in associative thinking and conversational patterns relevant to interaction design.',
-						'Develop more advanced evaluation methods to compare AI-generated associations with human responses, including measures of semantic similarity, creativity, and contextual relevance — metrics that could directly inform conversational UX design.',
+						'Develop more advanced evaluation methods to compare AI-generated associations with human responses, including measures of semantic similarity, creativity, contextual relevance, and metrics that directly inform downstream interaction logic and model explainability.',
 						'Improve the conversational architecture by introducing adaptive dialogue strategies that allow AI agents to adjust their responses based on interaction history and user-specific patterns, moving toward more personalized, human-centered conversation design.'
 					]
 				}
@@ -741,7 +739,7 @@
 
 							"Handling large video files required efficient frame extraction and batching techniques to avoid excessive processing time. Additionally, ensuring that detection results were correctly aligned with timestamps and metadata required careful data structuring and validation. Another important aspect was designing a user-friendly interface.",
 
-							"Designing a user-friendly interface was just as central to this project as the detection pipeline itself. The PyQt application was developed to support multiple file uploads, individual and batch downloads, and real-time status updates, so users could process multiple inspections simultaneously and always know where a given video stood in the pipeline rather than waiting on an opaque process.",
+							"The interface was designed to make complex backend inference transparent and actionable. Developed with PyQt, the application supports concurrent file uploads, batch export operations, and live processing telemetry. By exposing pipeline status at each execution stage, the interface transforms asynchronous computer vision tasks into a predictable, trustworthy user experience.",
 
 							"The integration of AWS Rekognition introduced challenges related to API latency and error handling. To address this, the pipeline included retry mechanisms and logging to ensure reliability, since a failure a user couldn't see or understand would erode trust in the tool. Overall, this project emphasizes system design, scalability considerations, and real-world usability."
 						]
@@ -749,7 +747,7 @@
 					{
 						heading: 'Reflection',
 						paragraphs: [
-							"This project strengthened my understanding of building complete systems that integrate machine learning, user interfaces, and cloud services. I gained experience designing modular pipelines, handling asynchronous processes, and ensuring reliability across multiple components. One of the most valuable lessons was learning how to balance technical performance with usability, a highly accurate detection model is only useful if the people relying on it can actually understand and trust its output. Developing the detection pipeline was important, but ensuring that the interface was intuitive and useful for end users was equally critical, and often the harder design problem to solve.",
+							"This project strengthened my understanding of building complete systems that integrate machine learning, user interfaces, and cloud services. I gained experience designing modular pipelines, handling asynchronous processes, and ensuring reliability across multiple components. One of the most valuable lessons was learning how to balance technical performance with usability, a highly accurate detection model is only useful if the people relying on it can actually understand and trust its output. Developing the detection pipeline was important, but ensuring that the usability was intuitive and useful for end users was equally critical, and often the harder design problem to solve.",
 
 							"Additionally, working on this project improved my ability to debug complex systems, manage dependencies, and structure code for maintainability. I also gained experience in testing and validating results, which reinforced the importance of reliability in real-world applications, especially when the people using a tool need to trust its output without verifying it themselves. If I were to extend this project further, I would explore improving detection accuracy using a custom-trained model, implementing real-time processing capabilities, and deploying the system as a scalable cloud service. I would want to validate any interface changes with actual inspection teams rather than relying on my own assumptions about their workflow.",
 
@@ -789,15 +787,15 @@
 						items: ['MATLAB']
 					}
 				],
-				desc: `As a Physics Research Assistant at UC Merced, I worked under a professor whose research goals and standards I was responsible for meeting, investigating the magnetic behavior of Yttrium Iron Garnet (YIG) sphere arrays under controlled magnetic field conditions. The work paralleled core HCI/UX research methods, systematically testing variables, interpreting data, and iterating based on stakeholder feedback.
+				desc: `As a Physics Research Assistant at UC Merced, I worked under a professor whose research goals and standards I was responsible for meeting, investigating the magnetic behavior of Yttrium Iron Garnet (YIG) sphere arrays under controlled magnetic field conditions. The work paralleled core engineering processes — systematically testing variables, interpreting data, and iterating based on stakeholder feedback.
 
-				Using permanent magnets to precisely control field strength, I ran experiments evaluating resonance frequency uniformity and spin coupling within the array, regularly reporting findings and adjusting methodology based on my mentor's feedback. This is similar to incorporating stakeholder input into a UX research process. By analyzing the resulting data, I helped characterize the system's collective spin resonance behavior, sharpening my ability to translate complex data into clear, actionable conclusions.`,
+				Using permanent magnets to precisely control field strength, I ran experiments evaluating resonance frequency uniformity and spin coupling within the array, regularly reporting findings and adjusting methodology based on my mentor's feedback. By analyzing the resulting data, I helped characterize the system's collective spin resonance behavior, sharpening my ability to translate complex data into clear, actionable conclusions.`,
 
 				sections: [
 					{
 						heading: 'Overview of Files and Technologies Used',
 						paragraphs: [
-							"The research consisted primarily of experimental procedures, measurement records, and data analysis rather than traditional software components, a process that mirrored core UX research practices like structured data collection, comparative analysis, and organizing findings into a usable format. Laboratory equipment was used to generate and manipulate controlled magnetic fields while YIG sphere arrays served as the experimental medium for observing spin resonance behavior. Experimental measurements were systematically recorded and organized into datasets, allowing resonance frequencies across multiple spheres to be compared under varying conditions.",
+							"The research prioritized structured data collection, comparative analysis, and dataset organization over traditional software development. Laboratory equipment generated controlled magnetic fields around YIG sphere arrays to capture spin resonance behavior across varying environmental parameters. These experimental measurements were systematically aggregated into structured datasets, enabling precise comparative analysis of resonance frequencies across multiple sphere configurations.",
 
 							"Supporting documentation included lab notes, experimental observations, and data tables used to evaluate resonance uniformity and identify evidence of spin coupling. The work relied on precise methodology, careful measurement, and quantitative analysis to investigate the collective behavior of the spin system, reinforcing skills in rigorous, evidence-based analysis that transfer directly to interpreting user research data.",
 
@@ -821,7 +819,7 @@
 
 							"One of the most valuable aspects of the project was learning how to collect and analyze quantitative data while collaborating within a research environment and reporting progress to my professor. The experience strengthened my ability to approach problems methodically, evaluate outcomes objectively, and recognize the importance of reproducibility. These skills that directly inform how I now structure and interpret user research studies.",
 
-							"This research experience laid a strong foundation in analytical thinking and experimental methodology. The skills I developed, including data analysis, hypothesis-driven experimentation, and working within a stakeholder's expectations, continue to influence how I approach UX research and problem solving across interdisciplinary domains."
+							"This research experience laid a strong foundation in analytical thinking and experimental methodology. The skills I developed, including data analysis, hypothesis-driven experimentation, and working within a stakeholder's expectations, continue to influence how I approach problem solving and data integration across interdisciplinary domains."
 						]
 					}
 				],
